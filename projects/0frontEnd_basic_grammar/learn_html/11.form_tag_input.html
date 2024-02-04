@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>various of input-tag</title>
+  </head>
+  <body>
+    <h1>로그인 폼 만들어보기</h1>
+    <form action="">
+      <fieldset>
+        <legend>login!</legend>
+        <label>계정<input type="text" size="13" maxlength="13" /></label>
+        <label
+          >비밀번호(영문 대소문자&특수기호&숫자)<input type="password"
+        /></label>
+        <input type="submit" value="로그인" />
+      </fieldset>
+    </form>
+    <hr />
+    <h1>배송 정보 입력 폼 만들기</h1>
+    <form action="">
+      <fieldset>
+        <legend>배송정보 입력창</legend>
+        <label>이메일<input type="email" /> </label>
+        <label>전화번호(-생략)<input type="tel" /> </label>
+        <label>주소(도로명)<input type="text" /> </label>
+        <label><input type="submit" value="저장" /> </label>
+        <label><input type="reset" value="초기화" /> </label>
+      </fieldset>
+    </form>
+    <hr />
+    <h1>상품 주문 폼 만들기</h1>
+    <form action="">
+      <fieldset>
+        <legend>상품정보</legend>
+        <ul>
+          <li>
+            <label
+              >사과<input type="number" min="1" max="100" />개(최대100)</label
+            >
+          </li>
+          <li>
+            <label
+              >오렌지<input type="range" min='1' max=''100'>개(최대100)</label
+            >
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+    <hr />
+    <h1>날짜와 시간</h1>
+    <form action="">
+      <fieldset>
+        <legend>시간 선택</legend>
+        <input type="date" />
+        <input type="month" />
+        <input type="week" />
+        <input type="time" />
+      </fieldset>
+    </form>
+    <hr />
+    <h1>파일첨부</h1>
+    <form action="">
+      <fieldset>
+        <legend>파일첨부</legend>
+        <input type="file" multiple />
+      </fieldset>
+    </form>
+    <hr />
+    <h1>check box & radio!</h1>
+    <!--체크박스:다중다선택가능, radio:다중일택-->
+    <form action="">
+      <fieldset>
+        <legend>상품선택</legend>
+        <input type="checkbox" checked />사과
+        <ul>
+          <li>
+            <input type="radio" name="fruit_a" />3kg
+            <input type="number" min="0" max="5" />maximum 5box
+          </li>
+          <li>
+            <input type="radio" name="fruit_a" />5kg
+            <input type="number" min="0" max="5" />maximum 5box
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+  </body>
+</html>

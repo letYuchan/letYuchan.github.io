@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyframes</title>
+    <style>
+      @keyframes slidein {
+        0% {
+          border-radius: 0%;
+          background-color: blue;
+        }
+        50% {
+          background-color: red;
+        }
+        100% {
+          border-radius: 100%;
+          background-color: palevioletred;
+        }
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        background-color: chocolate;
+        animation: 5s infinite alternate slidein; /* 5s: duration, alternate: 순회->뒤로 다시 돌아감 infinite: 애니메이션 무한 반복 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

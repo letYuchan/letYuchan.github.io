@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- basic setting -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO -->
+    <meta name="author" content="letYuchan" />
+    <meta
+      name="description"
+      content="Author&#39;s Development Portfolio webSite"
+    />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/profile-logo.ico" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/bb85b5ed8a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- JavaScript -->
+    <script type="module" src="./src/main.js" defer></script>
+    <script type='module' src='./src/projects.js' defer></script>
+    <script type='module' src='./src/active.js' defer></script>
+    <script type='module' src='./src/typeIt.js' defer></script>
+        <!-- Typeit -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <title>letYuchan&#39; Portfolio website</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class='headerMaxHeight' id="header" aria-label="representative logo, navigation bar">
+      <div class="header__logo">
+        <img class="header__logo__img" src="./assets/profile-logo.ico" alt="logo" />
+        <h1 class="header__logo__title">letYuchan</h1>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu__item">
+            <a href="#home">home</a>
+          </li>
+          <li class="header__menu__item">
+            <a href="#about">about</a>
+          </li>
+          <li class="header__menu__item">
+            <a href="#skills">skills</a>
+          </li>
+          <li class="header__menu__item">
+            <a href="#work">work</a>
+          </li>
+          <li class="header__menu__item">
+            <a href="#testimonial">testimonial</a>
+          </li>
+          <li class="header__menu__item">
+            <a href="#contact">contact</a>
+          </li>
+        </ul>
+      </nav>
+      <button class='header__toggle'>
+        <i class="fa-solid fa-bars" style='color: var(--color-accent-variant);'></i>
+      </button>
+    </header>
+    <main aria-label="portfolio about web development">
+      <!-- home -->
+      <section id="home">
+        <div class="max-container">
+          <div class="home__avatar">
+            <img class='home__avatar__img' src="./assets/profile-removebg.png" alt="My avatar" />
+          </div>
+          <div class="home__container">
+            <h2 class="home__title">
+              Hello
+              <br />
+              I&#39;m
+              <strong class="home__title--strong">Junior Developer</strong>&#44;
+              Cho YuChan
+            </h2>
+            <p class="home__description">
+              Majoring in Computer Engineering In seoul&#44; South Korea
+            </p>
+              <a class="home__contact" href='#contact'>Contact Me</a>
+          </div>
+        </div>
+      </section>
+      <!-- about -->
+      <section id="about">
+     <div class="max-container">
+      <h2 class="about__title">About me</h2>
+      <p class="about__intro">
+        I will show you the development language, tools, and history that i
+        can use&#46;
+      </p>
+      <ul class="about__qualifications">
+        <li class="about__qualification">
+          <div class="about__iconContainer">
+            <i class="about__icon fa-brands fa-html5"></i>
+            <i class="about__icon fa-brands fa-css3-alt"></i>
+            <i class="about__icon fa-brands fa-js"></i>
+          </div>
+          <h1 class="about__qualification__title">Front&#45;end</h1>
+          <p class="about__qualification__description">
+            HTML&#44; CSS&#44; JavaScript&#44; TypeScript&#44; React&#44; Web
+            APIs
+          </p>
+        </li>
+        <li class="about__qualification">
+          <i class="about__icon fa-solid fa-c"></i>
+          <h1 class="about__qualification__title">Other Language</h1>
+          <p class="about__qualification__description">I can use C&#38;C&#43;&#43;</p>
+        </li>
+        <li class="about__qualification">
+          <i class="about__icon fa-solid fa-id-card"></i>
+          <h1 class="about__qualification__title">Certificate</h1>
+          <p class="about__qualification__description">First class word processor</p>
+        </li>
+      </ul>
+      <ul class="about__careers">
+        <li class="about__career">
+          <img
+            class="about__career__img"
+            src="./assets/mySchool-circle.png"
+            alt="my university"
+          />
+          <div>
+            <p class="about__career__title">
+              Student as Computer-Engineering in Seoul National University of
+              Science and Technology
+            </p>
+            <p class="about__career__period">2021 - Untill now</p>
+          </div>
+        </li>
+
+        <li class="about__career">
+          <img
+            class="about__career__img"
+            src="./assets/Endless-Creation.ico"
+            alt="my club"
+          />
+          <div>
+            <p class="about__career__title">
+              an academic club on campus, Development studies, seminars, and
+              project activities
+            </p>
+            <p class="about__career__period">
+              2021.03.~2021.07. , 2023.09.~2023.12.
+            </p>
+          </div>
+        </li>
+      </ul>
+     </div>
+      </section>
+      <!-- skills -->
+      <section id="skills">
+      <div class="max-container">
+        <h2 class='skills__title'>My Skills</h2>
+      <p class='skills__subtitle'>Skills & Attributes</p>
+      <p class='skills__description'>
+        See my skills about coding and something that i can handle skillful.
+      </p>
+      <div class='skills__container'>
+        <section id='coding'>
+          <h3 class='coding__title'>Coding Skills</h3>
+          <ul>
+            <li class='coding__items'>
+              <div class='coding__item__text'><span>HTML</span><span>85%</span></div>
+              <div class='bar'><div style='width: 85%'></div></div>      
+              <li class='coding__items'>
+                <div class='coding__item__text'><span >CSS</span><span>80%</span></div>
+                <div class='bar'><div style='width: 80%'></div></div>       
+              </li>
+              <li class='coding__items'>
+                <div class='coding__item__text'><span>JavaScript</span><span>75%</span></div>
+                <div class='bar'><div style='width: 75%'></div></div>       
+              </li>
+              <li class='coding__items'>
+                <div class='coding__item__text'><span>Cpp</span><span>70%</span></div>
+                <div class='bar'><div style='width: 70%'></div></div>       
+              </li>
+              <li class='coding__items'>
+                <div class='coding__item__text'><span>C</span><span>90%</span></div>
+                <div class='bar'><div style='width: 90%'></div></div>       
+              </li> 
+            </li>
+          </ul>
+        </section>
+        <section id='tools'>
+          <h3 class='tools__title'>Tools</h3>
+          <ul class='tools__container'>
+            <li class='tools__item'>Visual Studio Code</li>
+            <li class='tools__item'>Visual Studio 2022</li>
+            <li class='tools__item'>React</li>
+            <li class='tools__item tools__item__last'>TypeScript</li>
+            </li>
+            </li>
+          </ul>
+        </section>
+        <section id='etc'>
+          <h3 class='etc__title'>Etc</h3>
+          <ul class='etc__container'>
+            <li class='etc__item'>Git</li>
+            <li class='etc__item'>Github</li>
+            <li class='etc__item etc__item__last'>order and arrangement about all</li>
+          </ul>
+        </section>
+      </div>
+      </div>
+    </section>
+      <!-- work -->
+      <section id="work">
+       <div class="max-container">
+        <h2 class="work__title">My work</h2>
+        <p class='work__description'>Projects</p>
+        <ul class='work__categories'>
+          <li class='work__category'><button style='width: 100%;' data-category='all'>All </button><span class='work__category__count'>5</span></li>
+          <li class='work__category'><button style='width: 100%;' data-category='front'>Front-end </button><span class='work__category__count'>3</span></li>
+          <li class='work__category'><button style='width: 100%;' data-category='back'>back-end</button><span class='work__category__count'>0</span></li>
+          <li class='work__category'><button style='width: 100%;' data-category='grammar'>Grammar Study</button><span class='work__category__count'>2</span></li>
+        </ul>
+        <ul class='work__projects'>
+          <li class='work__project' data-type="front"><a href="#" target='_blank'>
+            <img class='work__project__img' src="assets/projects/project1.webp" alt="project1">
+            <div class='work__metadata'>
+              <h3 class='work__metadata__title'>Project #1</h3>
+              <p>Portfolio web site</p>
+            </div></a></li>
+          <li class='work__project' data-type="front"><a href="#">
+            <img class='work__project__img' src="assets/projects/project2.webp" alt="project2">
+            <div class='work__metadata'>
+              <h3 class='work__metadata__title'>Project #2</h3>
+              <p>Naver Clone coding</p>
+            </div>
+          </a></li>
+          <li class='work__project' data-type="front"><a href="#">
+            <img class='work__project__img' src="assets/projects/project3.webp" alt="project3">
+            <div class='work__metadata'>
+              <h3 class='work__metadata__title'>Project #3</h3>
+              <p>ShoppingList app</p>
+            </div>
+          </a></li>
+          <li class='work__project' data-type="grammar"><a href="#">
+            <img class='work__project__img' src="assets/projects/project4.webp" alt="project4">
+            <div class='work__metadata'>
+              <h3 class='work__metadata__title'>Project #4</h3>
+              <p>simple game</p>
+            </div>
+          </a></li>
+          <li class='work__project' data-type="grammar"><a href="#">
+            <img class='work__project__img' src="assets/projects/project5.webp" alt="project5">
+            <div class='work__metadata'>
+              <h3 class='work__metadata__title'>Project #5</h3>
+              <p>Frontend basic grammar</p>
+            </div>
+          </a></li>
+        </ul>
+       </div>
+      </section>
+      <!-- testimonial -->
+      <section id="testimonial">
+        <div class="max-container">
+          <h2 class="testimonial__title">Testimonials</h2>
+          <p class="tesimonial__description">They talk about me like this</p>
+          <ul class='testimonial__quotes'>
+            <li class="testimonial__quote">
+              <img
+                src="./assets/testimonials/people1.webp"
+                alt="person1"
+                class="testimonial__quote__img"
+              />
+              <p class="testimonial__quote__text">그는 끈기 있고 체계적이에요
+
+              </p>
+            </li>
+            <li class="testimonial__quote">
+              <img
+                src="./assets/testimonials/people2.webp"
+                alt="person2"
+                class="testimonial__quote__img"
+              />
+              <p class="testimonial__quote__text">그는 매우 똑똑해요</p>
+            </li>
+            <li class="testimonial__quote">
+              <img
+                src="./assets/testimonials/people3.webp"
+                alt="person3"
+                class="testimonial__quote__img"
+              />
+              <p class="testimonial__quote__text">그는 열정적이에요</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+    <!-- Go Home -->
+    <aside aria-label="a button to go to home section">
+      <a id='goHome' href="#home">
+        <i class="fa-solid fa-house"></i>
+      </a>
+    </aside>
+    <!-- contact -->
+    <footer id="contact" aria-label="contact to letYuchan(github, Naver blog)">
+      <div class="max-container">
+        <h2 class='contact__title'>If you want to contact letYuchan <span style='animation: colorChange 1s infinite;'>↓↓↓</span></h2>
+      <p class="contact__email">yuchancho174&#64;naver&#46;com</p>
+      <ul class="contact__links">
+        <li class="contact__link">
+          <a
+          href='https://github.com/letYuchan/letYucan.github.io' 
+          target="_blank"
+            title="github link"
+          >
+          <i class="contact__icon fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li class="contact__link">
+          <a
+            href="https://blog.naver.com/sharing_thoughts"
+            target="_blank"
+            title="NaverBlog link"
+          >
+            <img class='contact__blogPic' src="./assets/Naver-blog.ico" alt="NaverBlog" />
+          </a>
+        </li>
+      </ul>
+      <p class="contact__right">
+        By letYuchan&#40;조유찬&#41; &#45; All rights reserved
+        <br />
+        Design By letYuchan
+        <br />
+        FrontEnd By letYuchan
+      </p>
+      </div>
+    </footer>
+  </body>
+</html>

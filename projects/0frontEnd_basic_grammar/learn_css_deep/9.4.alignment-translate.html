@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Translate</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: grey;
+      }
+
+      .inner {
+        width: 80px;
+        height: 80px;
+        background-color: blue;
+        position: relative;
+        top: 50%; /* 부모박스의 50% */
+        left: 50%;
+        transform: translate(
+          -50%,
+          -50%
+        ); /* 인자는 순서대로 x축과 y축 담당, 여기서의 50%는 자신의 가로폭의 50%만큼 혹은 세로폭의 50%만큼 이동한다는 뜻 */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>translate(50%, 50%)</h1>
+    <div class="box">
+      <div class="inner"></div>
+    </div>
+  </body>
+</html>

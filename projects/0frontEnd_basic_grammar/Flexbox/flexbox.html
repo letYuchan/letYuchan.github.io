@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      .container {
+        background-color: beige;
+        height: 100vh;
+        display: flex; /* flexbox로 만들기 */
+        flex-direction: row; /* 주축 설정, default: row*/
+        flex-wrap: nowrap; /* item들이 한줄에 모두 차면 다음 줄로 넘어가게 만들지 결정, default: nowrap */
+        /* flex-flow: column nowrap; */ /* direction과 wrap을 한번에 작성 */
+
+        /* item 배치 결정 */
+        justify-content: space-evenly; /* 주축을 기준으로 어떻게 item을 배치할지 결정 */
+        align-items: center; /* 교차축을 기준으로 어떻게 item을 배치할지 결정 */
+        align-content: center; /* 여러 행이 존재할때 교차축을 기준으로 어떻게 각 행을 배치할지 결정 */
+      }
+      .item {
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+        order: 0; /* 아이템의 순서 결정, default: 0, value: integer, 숫자가 커질수록 후순위로 배치 */
+      }
+      .item1 {
+        background-color: #ef9a9a;
+        order: 2;
+        flex-grow: 1; /* 아이템이 container의 주축방향으로 빈공간을 가득 채우려고 할 때 그 비율을 결정, default: 0, value: integer, 숫자가 커질수록 채우려고하는 면적이 상대적으로 커짐 */
+        flex-shrink: 1;
+      }
+      .item2 {
+        background-color: #f48fb1;
+        order: 1;
+      }
+      .item3 {
+        background-color: #ce93d8;
+        flex-grow: 2;
+        flex-shrink: 2; /* container의 공간이 주축방향을 기준으로 줄어들 때 아이템의 크기가 얼마만큼의 비율로 줄어들지 결정, default: 0, value: integer, 숫자가 커질수록 더 많이 줄어듬 */
+      }
+      .item4 {
+        background-color: #b39ddb;
+        flex-basis: 30%; /* 아이템의 초기 크기를 결정, 30%는 container크기의 30%정도로 초기 크기가 결정된다는 의미, container가 줄어들거나 늘어날때도 고정(만약 화면크기가 줄어들어 container의 크기가 1000px->900px로 줄어들었다면 초기크기는 270px이 된다.) */
+      }
+      .item5 {
+        background-color: #90caf9;
+        flex-basis: 10%;
+      }
+      .item6 {
+        background-color: #a5d6a7;
+        flex-basis: 15%;
+      }
+      .item7 {
+        background-color: #e5ec95;
+        align-self: flex-end; /* 개별적으로 각 아이템의 교차 축(cross axis)에서의 정렬을 지정하는 데 사용 */
+      }
+      .item8 {
+        background-color: #fff494;
+      }
+      .item9 {
+        background-color: #ffc577;
+      }
+      .item10 {
+        background-color: #ffa188;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+      <div class="item item6">6</div>
+      <div class="item item7">7</div>
+      <div class="item item8">8</div>
+      <div class="item item9">9</div>
+      <div class="item item10">10</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input: part 2</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>로그인 창(upgrade ver)</legend>
+        <label
+          >아이디<input
+            type="text"
+            required
+            autofocus
+            placeholder="아이디 입력(13자리)"
+            maxlength="13"
+        /></label>
+        <label
+          >비밀번호<input
+            type="password"
+            required
+            placeholder="비밀번호 입력(15자리)"
+            maxlength="15"
+        /></label>
+        <div>
+          <ul>
+            <li><input type="submit" value="로그인" /></li>
+            <li><input type="button" value="회원가입" /></li>
+            <li><input type="reset" value="폼초기화" /></li>
+          </ul>
+        </div>
+      </fieldset>
+    </form>
+    <hr>
+    <form action="">
+        <fieldset>
+            <legend>배송 주문</legend>
+            <label>상품명: </label><input type="text" readonly value='RTX4090'></label>
+            <label>제조사:<input type="text" value='ASUS' disabled></label>
+        </fieldset>
+        <fieldset>
+            <legend>정보입력란</legend>
+            <ul>
+                <li><label for="">상품개수<input type="number" max='2'></label></li>
+                <li><label for="">성명<input type="text"></label></li>
+                <li><label for="">이메일주소<input type="email"></label></li>
+                <li><label for="">전화번호<input type="tel"></label></li>
+            </ul>   
+        </fieldset>
+     </form>
+     <hr>
+     <form action="">
+        <fieldset>
+            <legend>배송 주문</legend>
+            <label>상품명: </label><input type="text" readonly value='RTX4090'></label>
+        </fieldset>
+        <fieldset>
+            <legend>정보입력란</legend>
+            <ul>
+                <li><label for="">상품개수<input type="number" max='3'>(최대3개)</label></li>
+                <li><label for="">성명<input type="text"></label></li>
+                <li><label for="">이메일주소<input type="email"></label></li>
+                <li><label for="">전화번호<input type="tel"></label></li>
+                <li>
+                    <label for="path">제조사 선택</label>
+                    <select id="path" size='1'>
+                        <option value="ASUS" selected>아수스</option>
+                        <option value="MSI">MSI</option>
+                        <option value="GIGABYTE">기가바이트</option>
+                    </select>
+                </li>
+                <li> <label for="memo">배송메모</label>
+                    <textarea  for='memo' cols="40" rows="10" placeholder='배송 요청사항을 적어주세요'></textarea></li>
+            </ul>   
+            <button type='submit'>작성</button>
+             <button type='reset'>초기화</button>
+
+        </fieldset>
+     </form>
+
+  </body>
+</html>

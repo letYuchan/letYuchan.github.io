@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Centering</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: grey;
+        text-align: center; /* 수평중앙정렬 */
+      }
+      .text {
+        /* 수직중앙정렬 */
+        height: 100%; /* 부모의 100%로 설정 */
+        line-height: 100px; /* 줄높이 부모의 height로 설정 */
+      } /* 근본적인 솔루션은 아님 */
+    </style>
+  </head>
+  <body>
+    <h1>Text centering</h1>
+    <div class="box">
+      <h1 class="text">Text</h1>
+    </div>
+  </body>
+</html>

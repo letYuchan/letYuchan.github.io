@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #movies {
+        border: 10px solid black;
+        border-collapse: collapse;
+        width: 500px;
+      }
+      #movies td,
+      #movies th {
+        border: 5px solid #ddd;
+        padding: 10px;
+      }
+
+      #movies th {
+        padding-top: 17px;
+        padding-bottom: 17px;
+        text-align: left;
+        background-color: green;
+        color: white;
+      }
+
+      #movies tr:hover {
+        background-color: gray;
+      }
+
+      #movies tr:nth-child(even) {
+        background-color: rgb(189, 47, 47);
+      }
+    </style>
+  </head>
+  <body>
+    <table id="movies">
+      <tr>
+        <th>영화</th>
+        <th>상영시간</th>
+        <th>개봉</th>
+      </tr>
+      <tr>
+        <td>영화1</td>
+        <td>70분</td>
+        <td>2023.01.05 개봉</td>
+      </tr>
+      <tr>
+        <td>영화2</td>
+        <td>80분</td>
+        <td>2023.04.05 개봉</td>
+      </tr>
+      <tr>
+        <td>영화3</td>
+        <td>65분</td>
+        <td>2023.09.05 개봉</td>
+      </tr>
+      <tr>
+        <td>영화4</td>
+        <td>120분</td>
+        <td>2023.03.05 개봉</td>
+      </tr>
+      <tr>
+        <td>영화5</td>
+        <td>110분</td>
+        <td>2023.10.05 개봉</td>
+      </tr>
+      <tr>
+        <td>영화6</td>
+        <td>90분</td>
+        <td>2023.12.05 개봉</td>
+      </tr>
+    </table>
+  </body>
+</html>

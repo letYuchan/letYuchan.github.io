@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+      }
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #181818;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      .color1 {
+        background-color: #ef9a9a;
+      }
+      .color2 {
+        background-color: #f48fb1;
+      }
+      .color3 {
+        background-color: #ce93d8;
+      }
+      .color4 {
+        background-color: #b39ddb;
+      }
+      .color5 {
+        background-color: #90caf9;
+      }
+      .color6 {
+        background-color: #a5d6a7;
+      }
+      .color7 {
+        background-color: #e5ec95;
+      }
+      .color8 {
+        background-color: #fff494;
+      }
+      .color9 {
+        background-color: #ffc577;
+      }
+      .color10 {
+        background-color: #ffa188;
+      }
+      .container {
+        display: grid;
+        /* grid-template-columns: 100px 100px 100px;*/ /* 사이즈를 지정하고 3열 생성 */
+        /* grid-template-rows: 100px 100px 100px 100px; */ /* 사이즈를 지정하고 4행 생성 */
+        padding: 10px; /* 모든 아이템에 골고루 10px씩 여백을 생성하기 위함 */
+        grid-template-columns: repeat(
+          5,
+          1fr
+        ); /* 하나하나 적기에 힘들 때 repeat(행/열갯수, cell크기), fr단위: 사용가능한 너비/높이(container의 너비/높이)를 기준으로 비율로 나눠 공간분할 */
+        grid-auto-rows: minmax(
+          150px,
+          auto
+        ); /* auto: 명시적으로 행/열의 크기를 지정하지 않고 알아서 자동으로 배치 , minmax(최소값, 최대값): Grid cell의 크기를 최소 최대 얼마나 지정할지 결정 */
+        grid-gap: 10px; /* cell간 여백 생성 */
+      }
+      .item2 {
+        /* grid-column-start: 2; */ /* 영역을 얼마나 차지할지 결정 */
+        /* grid-column-end: 4; */
+        grid-column: 2/4; /* 한번에 설정 */
+
+        /* grid-row-start: 1;
+        grid-row-end: 3; */
+        grid-row: 1 / span 3; /* 각 행/열 번호가 아닌 몇개의 영역(cell)을 차지할지 span으로 지정 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item color1">item1</div>
+      <div class="item item2 color2">item2</div>
+      <div class="item color3">item3</div>
+      <div class="item color4">item4</div>
+      <div class="item color5">item5</div>
+      <div class="item color6">item6</div>
+      <div class="item color7">item7</div>
+      <div class="item color8">item8</div>
+      <div class="item color9">item9</div>
+      <div class="item color10">item10</div>
+    </div>
+  </body>
+</html>
