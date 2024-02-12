@@ -35,16 +35,16 @@ function observerCallback(entries) {
 
   const navIndex = selectLastOne
     ? sectionIds.length - 1
-    : findFristIntersecting(visibleSections);
-  selecNavItem(navIndex);
+    : findFirstIntersecting(visibleSections);
+  selectNavItem(navIndex);
 }
 
-function findFristIntersecting(sections) {
+function findFirstIntersecting(sections) {
   const index = sections.indexOf(true);
   return index >= 0 ? index : 0;
 }
 
-function selecNavItem(index) {
+function selectNavItem(index) {
   const navItem = navItems[index];
   if (!navItem) return;
   activeNavItem.classList.remove('active');

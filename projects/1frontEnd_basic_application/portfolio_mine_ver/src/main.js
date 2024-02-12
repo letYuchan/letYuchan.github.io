@@ -1,6 +1,5 @@
 'use strict';
 
-// hamburger button
 document.addEventListener('DOMContentLoaded', function () {
   const navMenu = document.querySelector('.header__menu');
   const navToggle = document.querySelector('.header__toggle');
@@ -29,18 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// home 아래로 내려가면 goHome button 나타나게 하기
 const goHome = document.querySelector('#goHome');
 const home = document.querySelector('#home');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
-  if (window.innerwidth <= 768) {
-    if (window.scrollY > homeHeight) {
-      goHome.classList.add('displayGoHome');
-    } else {
-      goHome.classList.remove('displayGoHome');
-    }
+  if (window.scrollY > homeHeight) {
+    goHome.classList.add('displayGoHome');
   } else {
-    return;
+    goHome.classList.remove('displayGoHome');
   }
 });
