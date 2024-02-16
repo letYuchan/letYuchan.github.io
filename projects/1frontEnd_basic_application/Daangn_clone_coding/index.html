@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <!-- width=device-width: 뷰포트의 너비를 디바이스의 실제 화면 너비로 설정/ initial-scale=1: 페이지가 처음 로드될 때 초기 줌 레벨을 1(100%)로 설정/ maximum-scale=1: 확대 최대비율이 1/ user-scalable:=no 확대/축소기능 비활성화 -->
+    <title>당신 근처의 당근</title>
+    <meta
+      name="description"
+      content="중고 거래부터 동네 정보까지, 이웃과 함께해요. 가깝고 따뜻한 당신의 근처를 만들어요."
+    />
+    <link rel="author" href="당근" />
+    <!-- meta태그로 author에 관한 정보를 표현하는게 표준적, 다만 HTML5에서 link태그의 기능 확장. 그럼에도 이는 비표준적인 방법 -->
+    <meta property="og:url" content="https://www.daangn.com/" />
+    <meta property="og:title" content="당신 근처의 당근" />
+    <meta
+      property="og:description"
+      content="중고 거래부터 동네 정보까지, 이웃과 함께해요. 가깝고 따뜻한 당신의 근처를 만들어요."
+    />
+    <meta property="og:site_name" content="당근" />
+    <meta
+      property="og:image"
+      content="https://www.daangn.com/images/meta/home/rebranded_daangn.png"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="ko_KR" />
+    <!-- OGP(Open Graph Protocol)에서 사용되는 메타태그로, 소셜미디어에서 링크가 공유될 때 웹페이지의 정보를 미리보기로 표시하기 위해 사용 -->
+    <meta property="fb:app_id" content="1463621440622064" />
+    <!-- property의 og는 기본설정, fb는 페이스북을 의미, 해당 고유식별번호는 개발자가 만든 웹 페이지를 페이스북에서 공유할 때 올바른 미리보기 정보를 생성하기 위한 페이스북 앱의 고유 식별자 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@danggeunmarket" />
+    <meta name="twitter:title" content="당신 근처의 당근" />
+    <meta
+      name="twitter:description"
+      content="중고 거래부터 동네 정보까지, 이웃과 함께해요. 가깝고 따뜻한 당신의 근처를 만들어요."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.daangn.com/images/meta/home/rebranded_daangn.png"
+    />
+    <!-- 트위터 전용 OGP -->
+    <meta
+      name="naver-site-verification"
+      content="d1f8112731c18313535732cf2516d6401bfed40a"
+    />
+    <!-- 네이버가 해당 웹 페이지의 소유자(개발자)를 확인하기 위한 식별코드로, 개발자들이 이를 네이버 검색 엔진 및 관련 서비스에 등록하면 네이버 검색결과에 웹 페이지가 노출될 때 더 정확한 정보를 표시하고, 검색엔진 내에서 페이지의 신뢰성을 높인다 -->
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta
+      name="csrf-token"
+      content="UmL7G1itrLFHVL4FeQGEt5azOPS_Pnat8ZjG7t8CZ7h_H5Rmc7hyCvCI8WGOg0eNN1W_il0KbkStgwHACXM9-g"
+    />
+    <!-- 해당 태그들의 역할은 CSRF(Cross-Site Request Forgery)라는 공격으로부터 웹 어플리케이션을 보호하기 위한 장치 -->
+    <!-- CSRF: 사용자가 웹 어플리케이션에 로그인하고 세션이 시작되고, 사용자가 악의적인 사이트나 이메일링크를 클릭한다면 공격액션에 대한 요청을 브라우저를 이용하여 생성, 웹 어플리케이션에게 이 요청을 전달, 브라우저는 사용자의 세션을 이용하여 서버로 해당 요총을 전송, 이 요청을 서버는 사용자의 권한으로 인식하고 명령 실행  -->
+    <!-- csrf-param은 토큰의 이름(변하지 않음, 일반적으로 권장하는 형식을 따름)을, csrf-token은 토큰에 대한 값 생성(해당 값은 세션이 만료되고 다시 로그인할때 값이 변경)-->
+    <!-- 로그인할 때(세션에 접속할 때) 서버는 고유한 CSRF 토큰을 생성하고 웹 form에 삽입, 사용자가 폼을 통해 서버에 데이터 전송시 CSRF 토큰을 함께 전송 이는 hidden input field로 작용, 서버는 토큰을 검증하여 세션에 저장된 토큰과 CSRF 토큰을 비교하여 일치하지 않으면 요청을 거부하거나 에러를 반환한다 -->
+    <link rel="icon" href="./assets/Daangn_favicon.ico" />
+    <!-- favicon 설정: 당근마켓에서 작성한 코드랑은 다르게 설정(해당 서버는 내가 갖고 있지 않으므로) -->
+    <link rel="alternate" hreflang="en" href="https://us.karrotmarket.com" />
+    <link rel="alternate" hreflang="en-us" href="https://us.karrotmarket.com" />
+    <link rel="alternate" hreflang="en-gb" href="https://uk.karrotmarket.com" />
+    <link rel="alternate" hreflang="ja" href="https://jp.karrotmarket.com" />
+    <link rel="alternate" hreflang="ja-jp" href="https://jp.karrotmarket.com" />
+    <link rel="alternate" hreflang="ko" href="https://daangn.com" />
+    <link rel="alternate" hreflang="ko-kr" href="https://daangn.com" />
+    <!-- 검색 엔진이나 브라우저에게 해당 페이지의 언어와 지역을 알려주어 사용자에게 올바른 언어와 지역에 해당하는 콘텐츠를 제공하도록 도와줌, 즉 언어와 지역에 맞는 대체 버전의 페이지를 지정-> SEO작업의 일종 -->
+    <link rel="canonical" href="https://www.daangn.com/" />
+    <!-- 원본 URL을 나타내는 역할, 검색엔진이 여러버전의 동일한 콘텐츠가 있을 경우 해당 페이지를 주요페이지로 간주하게 만듬(SEO 작업), canonical은 페이지의 여러버전이 존재하는 경우(모바일, 데스크톱, HTTP 버전 등)와 다중 URL이 동일한 혹은 유사한 컨텐츠를 가질 경우 -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div></div>
+    <main>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+    </main>
+    <div></div>
+  </body>
+</html>
