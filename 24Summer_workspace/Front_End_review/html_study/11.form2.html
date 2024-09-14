@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form2</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>로그인</legend>
+        <label for=""
+          >아이디<input type="text" size="11" value="영문자만" maxlength="15"
+        /></label>
+        <label for=""
+          >비밀번호<input
+            type="password"
+            size="15
+          "
+        /></label>
+      </fieldset>
+    </form>
+    <hr />
+    <form action="">
+      <fieldset>
+        <legend>배송정보</legend>
+        <ul>
+          <li>
+            <label>이름<input type="text" /></label>
+          </li>
+          <li>
+            <label>주소<input type="text" size="30" /></label>
+          </li>
+          <li>
+            <label
+              >이메일<input type="email" value="example@gmail.com"
+            /></label>
+          </li>
+          <li>
+            <label>전화번호<input type="tel" value="010-xxxx-xxxx" /></label>
+          </li>
+        </ul>
+      </fieldset>
+      <div>
+        <input type="submit" value="주문하기" />
+        <input type="reset" value="취소하기" />
+      </div>
+    </form>
+    <hr />
+    <form action="">
+      <fieldset>
+        <legend>상품정보1</legend>
+        <ul>
+          <li>
+            <label
+              >사과<input type="number" value="2" min="2" max="100" step="2"
+            /></label>
+          </li>
+          <li>
+            <label
+              >배<input type="number" value="2" min="2" max="100" step="2"
+            /></label>
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+    <hr />
+    <form action="">
+      <fieldset>
+        <legend>상품정보1</legend>
+        <ul>
+          <li>
+            <label
+              >사과<input type="range" value="2" min="2" max="100" step="2"
+            /></label>
+          </li>
+          <li>
+            <label
+              >배<input type="ranges" value="2" min="2" max="100" step="2"
+            /></label>
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+    <hr />
+    <form action="">
+      <fieldset>
+        <legend>날짜선택</legend>
+        <input type="date" /> 달력 <input type="month" /> 달
+        <input type="week" /> 주 <input type="time" /> 시간
+      </fieldset>
+    </form>
+    <hr />
+    <form action="">
+      <fieldset>
+        <legend>상품선택</legend>
+        <p><b>주문할 상품을 선택하세요</b></p>
+        <input type="checkbox" value="apple" checked />사과
+        <input type="checkbox" value="a_3" />3kg
+        <input type="number" min="0" max="5" value="0" />(최대3개)
+        <input type="checkbox" value="a_5" />5kg
+        <input type="number" min="0" max="5" value="0" />(최대3개)
+      </fieldset>
+    </form>
+    <hr />
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+      </head>
+      <body>
+        <form action="">
+          <fieldset>
+            <legend>상품선택</legend>
+            <p><b>주문할 상품을 선택하세요</b></p>
+            <input type="checkbox" value="apple" checked />사과
+            <!-- radio를 넣어준 관련된 input값들의 name 속성값은 일치해야된다-->
+            <input type="radio" value="a_3" name="fruit" />3kg
+            <input type="number" min="0" max="5" value="0" />(최대3개)
+            <input type="radio" value="a_5" name="fruit" />5kg
+            <input type="number" min="0" max="5" value="0" />(최대3개)
+          </fieldset>
+        </form>
+      </body>
+    </html>
+  </body>
+</html>

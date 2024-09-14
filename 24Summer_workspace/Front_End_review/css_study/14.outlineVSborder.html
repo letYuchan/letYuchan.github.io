@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>outlineVsborder</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: brown;
+      }
+      .box1 {
+        box-sizing: border-box;
+        border: 3px solid black;
+      }
+      .box2 {
+        box-sizing: border-box;
+        outline: 3px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">기본</div>
+    <div class="box box1">border</div>
+    <!-- 바깥으로 테두리가 나와보이지만 box-sizing이 border-box이기 때문에 요소탐색시 여전히 100px임-->
+    <div class="box box2">outline</div>
+  </body>
+</html>

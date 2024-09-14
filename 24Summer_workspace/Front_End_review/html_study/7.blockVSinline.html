@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blockVSinline</title>
+    <style>
+      .span {
+        background-color: blueviolet;
+      }
+      .block {
+        background-color: mediumseagreen;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background-color: red; color: yellow">
+      블록레벨의 태그는 요소가 너비를 꽉 채움
+    </div>
+    <span style="background-color: blue; color: white"
+      >인라인 레벨은 딱 컨텐츠만큼만 차지</span
+    >
+    <hr />
+    <div style="width: 200px; height: 200px; background-color: aqua">
+      블록레벨은 가로세로 수정 가능
+    </div>
+    <span
+      style="width: 500px; line-height: 50px; background-color: antiquewhite"
+      >인라인 레벨은 가로세로 변경 불가능(코드 확인)</span
+    >
+    <hr />
+  </body>
+  <h3>블록레벨은 세로로 나열</h3>
+  <div class="block">1</div>
+  <div class="block">2</div>
+  <div class="block">3</div>
+  <h3>인라인레벨은 가로로 나열</h3>
+  <span class="span">1</span>
+  <span class="span">2</span>
+  <span class="span">3</span>
+</html>

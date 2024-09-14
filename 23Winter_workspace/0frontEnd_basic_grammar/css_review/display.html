@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        .none{
+            display: none;
+        }
+        .changeToBlock{
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            color: black;
+        }
+        .changeToInline{
+            display: inline;
+            background-color: red;
+            color: white;
+        }
+        .hidden{
+            visibility: hidden;
+            height: 300px;
+        }
+        .subEle{
+            height: 50px;
+            width: 310px;
+            border: 1px solid blacks;
+        }
+    </style>
+</head>
+<body>
+    <div class="none">이 요소는 안보입니다(영역차지도 안함)</div>
+    <span class="changeToBlock">span태그인데 block속성 적용가능</span>
+    <div class="changeToInline">div태그인데 inline 속성으로</div>
+    <div class="hidden">안보이지만 영역은 차지(개발자도구로 확인)</div>
+    <div class="subEle">hidden 값은 영역을 차지함을 보여주기 위한 도구</div>
+    
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Selector</title>
+    <style>
+        a:active{
+            color: green;
+        }
+        .link:link{
+            border-top: 1px solid yellow;
+        }
+        .visited:visited{
+            color: red;
+        }
+        .hover:hover{
+            font-weight: bold;
+        }
+        .focus:focus{
+            border: 1px solid blue;
+        }
+        li:nth-child(even){
+            color: blue;
+        }
+        .smallTalk::first-letter{
+            font-size: 50px;
+            background-color: red;
+            color: white;
+        }
+        .content::first-line{
+            background-color: yellow;
+        }
+        label::before{
+            content: '*';
+            margin-right: 2px;
+            color: red;    
+        }
+        .content::selection{
+            background-color: blue;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>가상클래스</h1>
+    <a class="link" href="https://eclass.seoultech.ac.kr/ilos/main/main_form.acl">eclass</a>
+    <hr>
+    <a class="visited" href="https://google.com">구글</a>
+    <hr>
+    <p class="hover">hover시 굵기 변경
+
+    </p>
+    <hr>
+    <form>
+        <fieldset>
+            <legend>로그인</legend>
+            <label for"id">아이디</label>
+            <input class="focus" type="text" id="id">
+            <label for"pw">비밀번호</label>
+            <input class="focus" type="password" id="pw">
+        </fieldset>
+    </form>
+    <hr>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <hr>
+    <h1 class="smallTalk">가상요소</h1>
+    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia illum fugit cum laudantium temporibus velit modi at dolore doloribus, optio maxime voluptas dolor! Soluta dolor tempora ipsam voluptates minima!
+    Ipsum porro modi eaque atque nostrum cum illum quas sit commodi illo, corporis repudiandae quibusdam facilis voluptatem, veniam tenetur nisi perspiciatis amet quisquam delectus recusandae doloremque doloribus eveniet velit. Atque.
+    Ad accusantium, voluptatum, maxime inventore unde adipisci odio natus laudantium ipsam sed ullam blanditiis culpa laboriosam. Recusandae quam similique, ipsa molestias excepturi nisi mollitia ipsum assumenda, asperiores voluptas veniam ad.
+    Quod nobis ratione expedita enim beatae iure, culpa deleniti alias aliquid vitae quos natus debitis commodi! Quisquam minima soluta inventore fugiat exercitationem deserunt ea doloribus qui vero? Eligendi, quasi veritatis.
+    Id quae eligendi quaerat doloribus. Fuga reprehenderit doloremque nostrum, tempora voluptates, tenetur rerum nam, debitis iste maiores possimus quia nihil! Perspiciatis dolore eos in voluptatem eveniet animi est, voluptatum nostrum.
+    Ratione nulla accusantium libero deleniti animi praesentium veritatis eaque iste, quidem quam inventore corrupti cupiditate soluta quibusdam, qui sequi voluptates nam. Cum suscipit ea sunt libero fugiat corrupti ratione cumque.</p>
+</body>
+</html>

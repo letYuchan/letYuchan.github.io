@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+      }
+      /* text정렬을 위헤 flex 사용 */
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #181818;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      .color1 {
+        background-color: #ef9a9a;
+      }
+      .color2 {
+        background-color: #f48fb1;
+      }
+      .color3 {
+        background-color: #ce93d8;
+      }
+      .color4 {
+        background-color: #b39ddb;
+      }
+      .color5 {
+        background-color: #90caf9;
+      }
+      .color6 {
+        background-color: #a5d6a7;
+      }
+      .color7 {
+        background-color: #e5ec95;
+      }
+      .color8 {
+        background-color: #fff494;
+      }
+      .color9 {
+        background-color: #ffc577;
+      }
+      .color10 {
+        background-color: #ffa188;
+      }
+      .container {
+        display: grid;
+        padding: 10px;
+        /* 열 지정, fr: 부모 컨테이너 기준 비율로 cell 배치 */
+        grid-template-columns: repeat(5, 1fr);
+        /* auto로 설정해주고싶을때 사용, minmax(최소 행 높이, 최대행높이) */
+        grid-auto-rows: minmax(150px, auto);
+        /* 각 셀 사이의 마진 설정 */
+        grid-gap: 10px;
+      }
+      .item2 {
+        /* gird-column/row: 영역차지설정
+        /* start-line 2 -> end-line 4 */
+        grid-column: 2/4;
+        /* 라인넘버가 아닌 몇개의 셀 영역만큼 차지할지 -> 1~3행까지 차지 */
+        grid-row: 1 / span 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item color1">item1</div>
+      <div class="item item2 color2">item2</div>
+      <div class="item color3">item3</div>
+      <div class="item color4">item4</div>
+      <div class="item color5">item5</div>
+      <div class="item color6">item6</div>
+      <div class="item color7">item7</div>
+      <div class="item color8">item8</div>
+      <div class="item color9">item9</div>
+      <div class="item color10">item10</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <style>
+        .color{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+        .inline{
+            display: inline-block;
+            box-sizing: border-box;
+            width: 200px;
+            height: 500px;
+            overflow: auto;
+        }
+        .scroll{
+            background-image: url('../assets/sky.jpeg');
+            background-attachment: scroll;
+        }
+        .fixed{
+            background-image: url('../assets/sky.jpeg');
+            background-attachment: fixed;
+
+        }
+        .local{
+            background-image: url('../assets/sky.jpeg');
+            background-attachment: local;
+        }
+        .size{
+            background-size: auto;
+            width: 500px;
+            height: 500px;
+            background-image: url('../assets/son.jpeg');
+            background-position: center;
+
+        }
+        .gradient{
+            background: linear-gradient(to top right, red, blue);
+            width: 1000px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="color"></div>
+    <hr>
+    <div class="scroll inline">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla placeat eligendi magnam debitis? Eveniet, consequuntur sunt id vitae laboriosam dignissimos corporis rerum iste, deserunt tempora velit nemo accusantium, ipsa mollitia.
+        Tenetur quod consectetur rem autem voluptatibus, sit dolor sequi quisquam aliquid ducimus doloribus odit unde asperiores velit temporibus? Vitae placeat mollitia voluptas sit voluptatum optio reprehenderit illo rerum iste consequatur!
+        Ab autem quidem cupiditate blanditiis? Minus dolores sit voluptas consequatur eos rem assumenda, sed temporibus, molestiae voluptatibus ea adipisci iusto, placeat suscipit cumque at doloribus! Ipsa ipsum earum nemo veniam.
+        Modi, laborum. Qui quibusdam ipsum rem minima temporibus nostrum soluta unde commodi blanditiis quod fuga doloribus beatae, eligendi animi veritatis neque nam nihil. Distinctio, hic quia. Numquam autem culpa necessitatibus.
+        Aliquid in mollitia voluptatem, beatae nihil iusto obcaecati. Odit fuga ut error tenetur ipsam ipsum eos a tempore reprehenderit corporis. Obcaecati possimus velit enim harum deserunt iusto blanditiis animi consectetur!
+    </div>
+    <div class="fixed inline">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi veniam ducimus mollitia nesciunt pariatur sapiente quas odio qui porro amet distinctio dicta veritatis, sed aperiam dolorem quam similique quaerat corporis?
+        Ratione delectus vero cupiditate alias beatae sit porro voluptate at nam, quo aliquam, inventore laudantium fuga amet sequi. Quis quidem culpa voluptatem inventore adipisci nemo debitis obcaecati rerum nulla id?
+        Soluta explicabo voluptatibus necessitatibus ipsum consectetur dolorum numquam voluptas impedit tenetur praesentium, earum excepturi quasi provident et? Blanditiis excepturi quibusdam sed nesciunt placeat rerum nisi eius, repellendus quis amet pariatur.
+        Tenetur doloremque, dolores est ea perspiciatis optio ullam ex placeat in voluptates corporis alias eos similique harum? Beatae cumque quibusdam laborum maxime quae totam odit quisquam, nulla quam ea modi.
+        Neque nulla ipsum itaque eum omnis, cumque tempora nesciunt voluptatem debitis eos est facilis rerum temporibus quos labore molestias at ipsa id quaerat. Sed esse assumenda ad deleniti eos magni!
+    </div>
+    <div class="local inline">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, fugit aspernatur corrupti necessitatibus debitis commodi? Dolore, culpa. Quae magni laudantium perspiciatis adipisci, esse tempore laborum quos culpa fugit. Quis, itaque.
+        Quisquam distinctio, cum magnam ex veritatis voluptas eligendi provident commodi laudantium natus, voluptates accusamus itaque atque ratione repellendus quae tempora facilis, officiis nisi optio enim asperiores placeat vero laborum! Eligendi.
+        Incidunt minima expedita saepe quod temporibus veniam porro! Nihil modi pariatur molestias veniam explicabo vel, obcaecati doloribus? Nesciunt, quaerat maiores. Distinctio aut incidunt deserunt quaerat. Consectetur sed nesciunt a voluptatibus.
+        Voluptate, commodi officia amet voluptatum animi minus exercitationem aspernatur nostrum suscipit incidunt quibusdam atque sed in autem, aliquid rerum est sint inventore consequuntur saepe, ea repellat laborum. Cupiditate, voluptatum minima?
+        Praesentium, tempora iusto dignissimos commodi id velit exercitationem possimus obcaecati inventore officia autem deserunt cumque qui quidem dolores dolore libero, ratione quae accusantium expedita consectetur. Iusto illum provident eum labore?
+    </div>
+    <hr>
+    <div class="size"></div>
+    <hr>
+    <h1>Linear-gradient</h1>
+    <div class="gradient"></div>
+</body>
+</html>

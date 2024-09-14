@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form3</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>배송 주문</legend>
+            <label>상품명: </label><input type="text" readonly value='RTX4090'></label>
+        </fieldset>
+        <fieldset>
+            <legend>정보입력란</legend>
+            <ul>
+                <li><label for="">상품개수<input type="number" max='2'></label></li>
+                <li><label for="">성명<input type="text"></label></li>
+                <li><label for="">이메일주소<input type="email"></label></li>
+                <li><label for="">전화번호<input type="tel"></label></li>
+                <li>
+                    <label for="path">제조사 선택</label>
+                    <select id="path" size='1'>
+                        <option value="ASUS" selected>아수스</option>
+                        <option value="MSI">MSI</option>
+                        <option value="GIGABYTE">기가바이트</option>
+                    </select>
+                </li>
+                <li> <label for="memo">배송메모</label>
+                    <textarea  for='memo' cols="40" rows="5" placeholder='배송 요청사항을 적어주세요'></textarea></li>
+            </ul>   
+            <button type='submit'>작성</button>
+             <button type='reset'>초기화</button>
+
+        </fieldset>
+     </form>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "type": "lldb",
+          "request": "launch",
+          "name": "Lldb debug",
+          "program": "${fileDirname}/${fileBasenameNoExtension}",
+          "args": [],
+          "cwd": "${workspaceRoot}",
+          "preLaunchTask": "C++ build for clang++",  // 빌드 작업 참조 추가
+          "targetArchitecture": "x86_64"
+      }
+  ]
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <style>
+        /* basic selector */
+        body, html, hr, ul{
+            border: none;
+            padding: 0;
+        }
+        *{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+        .basicS1{
+            background-color: red;
+        }
+        #basicS2{
+            background-color: blue;
+        }
+        div[class$='3']{
+            background-color: yellow;
+        }
+        /* group selector */
+          .groupA, .groupB{
+            background-color: aqua;
+        }
+        /* 결합자 */
+        ul li{
+            background-color: brown;
+            list-style-type: none;
+        }
+        ul>.nearByParent{
+            background-color: violet;
+            list-style-type: none;
+            margin-top: 150px;
+        }
+        .base~div{
+            background-color: bisque;
+        }
+        .base2+div{
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div>1</div>
+<div class="basicS1">2</div>
+<div id="basicS2">3</div>
+<div class="basicS3">4</div>
+<div>5</div>
+<hr>
+<div class="groupA">6</div>
+<div class="groupB">7</div>
+<hr>
+<ul>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+</ul>
+<hr>
+<ul>
+    <li class="nearByParent">11</li>
+    <li style="display: none;"></li>
+</ul>
+<hr>
+<div class="base">12</div>
+<div>13</div>
+<div>14</div>
+<div>15</div>
+<hr>
+<div class="base2">16</div>
+<div>17</div>
+<div>18</div>
+</body>
+</html>

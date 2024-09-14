@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>custom_property_data</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: tomato;
+        margin-bottom: 50px;
+      }
+      div[data-display-name="dream"] {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-index="1" data-display-name="dream">드림!!</div>
+    <div data-index="2" dat-display-name="coding"></div>
+    <span data-index="1" data-display-name="dream">드림!!</span>
+    <script>
+      const dream = document.querySelector('div[data-display-name="dream"]');
+      console.log(dream.dataset);
+    </script>
+  </body>
+</html>

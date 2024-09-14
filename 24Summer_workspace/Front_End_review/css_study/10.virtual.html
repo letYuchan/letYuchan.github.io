@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>virtual</title>
+    <style>
+      a {
+        font-size: 30px;
+      }
+      a:link {
+        color: red;
+      }
+      a:visited {
+        color: blue;
+      }
+      a:hover {
+        font-weight: 300;
+        background-color: yellow;
+      }
+      p {
+        font-size: 15px;
+      }
+      p::first-letter {
+        font-size: 30px;
+        background-color: aquamarine;
+      }
+      p::first-line {
+        background-color: yellow;
+      }
+      p::selection {
+        background-color: blue;
+      }
+      input:focus {
+        outline: none;
+        border: 1px solid red;
+        box-shadow: 0 0 20px skyblue;
+      }
+      .required::before {
+        content: "*";
+        margin-right: 2px;
+        color: red;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="www.naver.com">네이버</a>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur minima
+      ipsum, eum unde illo id. Aut nisi iusto deleniti natus impedit blanditiis
+      dolores quia nihil. Voluptas deleniti nesciunt sequi? Eos? Maiores, culpa
+      aut? Minus perspiciatis ipsam, repellat, quidem odit maxime voluptates
+      quam ut alias unde delectus mollitia quos adipisci, esse dolor deserunt
+      facere voluptas nostrum. Accusantium maiores fugit nesciunt ad. Cumque
+      tempora molestiae molestias facilis accusantium architecto impedit
+      dignissimos necessitatibus dolor, repellat doloribus alias ullam, omnis
+      fugit consequatur saepe enim fugiat tenetur? Placeat unde et perspiciatis
+      aspernatur, fugiat eveniet cumque. Enim natus soluta voluptas recusandae
+      perspiciatis quae tenetur dolorem dolore molestiae maiores fugiat totam
+      deleniti, inventore cupiditate voluptatibus. Atque quam magnam laudantium
+      iusto veniam eum quos rerum iure? Omnis, voluptates. Dolor cumque beatae
+      quos maiores debitis nemo voluptatum consequuntur vitae ad in natus rerum
+      repellat, et quam ea, aspernatur vel culpa omnis veritatis repudiandae
+      eligendi. Est quod quae perferendis suscipit?
+    </p>
+    <fieldset>
+      <legend>focus, before, after</legend>
+      <div class="field">
+        <label class="required" for="name">이름</label>
+        <input type="text" id="name" />
+      </div>
+      <div class="field">
+        <label class="required" for="age">나이</label>
+        <input type="text" id="age" />
+      </div>
+      <button data-tooltip="이버튼을 클릭하여 정보를 보내세요!">전송</button>
+    </fieldset>
+  </body>
+</html>

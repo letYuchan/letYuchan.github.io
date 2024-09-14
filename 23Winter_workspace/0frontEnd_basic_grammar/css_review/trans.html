@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trans</title>
+    <style>
+        .outline{
+            border: 5px solid yellow;
+            width: 200px;
+            height: 200px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+        .transform1{
+            transform: translate(30px, -50px);
+        }
+        .transform2{
+            transform: scale(0.5, 0.5);
+        }
+        .transform3{
+            transform: rotate(60deg);
+        }
+        .transform4{
+        transform: skew(10deg, 20deg);
+        perspective: 50px;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .transition:hover{
+            width: 500px;
+            height: 500px;
+            transition-property: width, height; 
+            transition-duration: 2s;
+            transition-delay: 3s;
+            transition-timing-function: ease-in;
+        }
+    </style>
+</head>
+<body>
+    <h1>TransForm</h1>
+    <br>
+    <div class="outline">
+        <div class="box transform1"></div>
+    </div>
+    <div class="outline">
+        <div class="box transform2"></div>
+    </div>
+    <div class="outline">
+        <div class="box transform3"></div>
+    </div>
+    <div class="outline">
+        <div class="box transform4"></div>
+    </div>
+    <hr>
+    <h1>Transition</h1>
+    <br>
+    <div class="box2 transition"></div>
+</body>
+</html>

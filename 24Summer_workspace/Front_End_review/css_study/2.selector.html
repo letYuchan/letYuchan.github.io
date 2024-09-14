@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selector</title>
+    <style>
+      * {
+        font-size: 30px;
+        color: bisque;
+      }
+      p {
+        font-size: 20px;
+        color: red;
+      }
+      .classSelector {
+        font-size: 50px;
+        color: blue;
+      }
+      .IDSelector {
+        font-size: 15px;
+        color: brown;
+      }
+      img[src] {
+        width: 500px;
+        height: 500px;
+      }
+      .group1,
+      .group2 {
+        color: goldenrod;
+      }
+      ul li {
+        color: chocolate;
+      }
+      ul > li {
+        color: blueviolet;
+      }
+      ul ~ div {
+        color: aqua;
+      }
+      ul + div {
+        color: khaki;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>hellow world</h3>
+    <p>hello world</p>
+    <p class="classSelector">hello world</p>
+    <p class="IDSelector">hello world</p>
+    <hr />
+    <!-- 속성선택자 -->
+    <img src="../assets/cat1.jpeg" alt="cute cat" />
+    <div class="group1">hi1</div>
+    <div class="group2">hi2</div>
+    <hr />
+    <ul>
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+      <li>four</li>
+    </ul>
+    <div>five</div>
+    <div>six</div>
+    <h1>seven</h1>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>alignment_technique</title>
+    <style>
+      .container {
+        width: 200px;
+        height: 100px;
+        background-color: slategray;
+        text-align: center;
+      }
+      /* 기본적으로 블록요소는 왼쪽정렬 */
+      .block_inner {
+        width: 50%;
+        height: 50%;
+        margin: auto;
+        background-color: blue;
+        color: white;
+      }
+      .text {
+        height: 100%;
+        line-height: 100px;
+      }
+      .center_inner {
+        width: 50%;
+        height: 50%;
+        background-color: blue;
+        position: relative;
+        /* 부모박스의 50% */
+        top: 50%;
+        left: 50%;
+        /* 자신의 폭의 50% */
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>block level 수평중앙정렬</h1>
+    <div class="container">
+      <div class="block_inner">margin auto를 사용하세요</div>
+    </div>
+    <hr />
+    <h1>inline level 수평중앙정렬</h1>
+    <div class="container">
+      <button>부모요소에 text-align center</button>
+    </div>
+    <hr />
+    <h1>text 완전중앙정렬</h1>
+    <div class="container">
+      <h1 class="text">text</h1>
+    </div>
+    <hr />
+    <h1>요소 완전중앙정렬</h1>
+    <div class="container">
+      <div class="center_inner"></div>
+    </div>
+  </body>
+</html>

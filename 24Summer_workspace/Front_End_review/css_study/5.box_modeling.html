@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>box_modeling</title>
+    <style>
+      .content {
+        border: 1px solid green;
+        width: 500px;
+        height: 500px;
+        padding: 20;
+        margin: 40px;
+      }
+      .margin {
+        text-align: center;
+        margin-right: 90px;
+        margin-bottom: 30px;
+        border: 1px solid red;
+      }
+      .padding {
+        text-align: center;
+        padding: 50px 10px;
+        border: 1px solid red;
+      }
+      .border {
+        margin-top: 30px;
+        width: 300px;
+        height: 300px;
+        border-top: 3px solid black;
+        border-left: 3px dashed blue;
+        border-right: 3px dotted red;
+        border-bottom: 3px solid black;
+        border-radius: 50%;
+      }
+      /* 기본값: content에만 width와 height 설정 */
+      .basedOnContent {
+        border: 1px solid black;
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        box-sizing: border-box;
+        /* 박스사이징 값을 보더박스로 하면 보더포함해서 100px, 100px임 */
+      }
+      .borderBox {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content"></div>
+    <div class="margin">마진을 설정해보자</div>
+    <div class="padding">여백을 설정해보자</div>
+    <div class="border"></div>
+    <hr />
+    <div class="basedOnContent"></div>
+    <div class="borderBox"></div>
+  </body>
+</html>

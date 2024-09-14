@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxSize</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .margin{
+            margin: 50px 25px;
+        }
+        .border{
+            text-align: center;
+            border-radius: 50%;
+            border-bottom: 5px solid blue;
+            border-top: 5px dotted red;
+            border-left: 5px dashed gray;
+            border-right: 5px solid yellow;
+        }
+        .padding{
+            padding: 5px 10px 25px 30px
+        }
+        .all{
+            border: 1px solid violet;
+            padding: 5px;
+            margin: 10px 5px;
+            background-color: yellow;
+        }
+        .boxSizingContent{
+            margin-top: 100px;
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            background-color: blue;
+            color: white;
+        }
+        .boxSizingBorder{
+            box-sizing: border-box;
+            padding: 10px;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+            /* 이제 두개의 요소는 크기가 똑같을 겁니다! */
+        }
+    </style>
+</head>
+<body>
+    <div class="margin">margin</div>
+    <div class="border">border</div>
+    <div class="padding">padding</div>
+    <div class="all">all</div>
+    <hr>
+    <!-- bos-sizing 속성 비교-->
+    <div class="boxSizingContent">1</div>
+    <div class="boxSizingBorder">2</div>
+    <hr>
+    <span style="display: inline-block; height: 100px; width: 100px; background-color: beige;">inline-block으로 바꿔주면 block요소처럼 작동</span>
+    <span >이 요소는 inline 속성</span>
+
+</body>
+</html>

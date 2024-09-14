@@ -1,0 +1,39 @@
+{
+  "files.associations": {
+    "iostream": "cpp",
+    "deque": "cpp",
+    "__bit_reference": "cpp",
+    "__hash_table": "cpp",
+    "__split_buffer": "cpp",
+    "__tree": "cpp",
+    "array": "cpp",
+    "forward_list": "cpp",
+    "initializer_list": "cpp",
+    "list": "cpp",
+    "map": "cpp",
+    "set": "cpp",
+    "string": "cpp",
+    "string_view": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "vector": "cpp",
+    "stack": "cpp",
+    "ostream": "cpp",
+    "new": "cpp",
+    "*.c": "c",
+    "*.cpp": "cpp",
+    "*.h": "cpp",
+    "*.hpp": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "disabled",
+  
+  "code-runner.executorMap": {
+    "cpp": "clang++ -std=c++11 $fullFileName -o $fileNameWithoutExt && ./$fileNameWithoutExt"
+  },
+  "code-runner.runInTerminal": true,
+  
+
+  
+  
+}
+

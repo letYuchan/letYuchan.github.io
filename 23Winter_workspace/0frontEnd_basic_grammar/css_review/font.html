@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+        html{
+            font-size: 15px;
+        }
+        .size{
+            font-size: 30px;
+        }
+        .style{
+            font-style: italic;
+        }
+        .weight{
+            font-weight: bold;
+        }
+        .variant{
+            font-variant: small-caps;
+        }
+        .align{
+            text-align: center;
+        }
+        .space{
+            letter-spacing: 15px;
+        }
+        .indent{
+            text-indent: 20px;
+        }
+        .transform{
+            text-transform: lowercase;
+        }
+        .textDec{
+            text-decoration: none;
+        }
+        .shadow{
+            text-shadow: 10px 5px 3px red;
+        }
+        .listSt{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: blue;">Font Style</h1>
+    <p class="size">사이즈를 바꿔요</p>
+    <br>
+    <h1 class="style">스타일을 바꿔요</h1>
+    <br>
+    <h1 class="weight">굵기를 바꿔요</h1>
+    <br>
+    <h1 class="variant">it change lowercase to litte-uppercase</h1>
+    <br>
+    <h1 class="align">배치를 바꿔요</h1>
+    <br>
+    <h1 class="lh">줄 간격을 바꿔요</h1>
+    <br>
+    <h1 class="space">자간 혹은 단어 간격을 바꿔요</h1>
+    <br>
+    <h1 class="indent">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates quisquam necessitatibus omnis aliquid, molestiae autem rerum qui minus, dolorem eligendi aut, modi soluta optio assumenda velit harum beatae libero ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga architecto voluptatum ut odio excepturi incidunt aut quo tempora quam temporibus dolore veritatis natus deserunt quas repellendus optio, non quisquam.</h1>
+    <br>
+    <h1 class="transform">IT CAN CHANGE STRING-CASE</h1>
+    <br>
+    <a href="https://naver/com" class="textDec">Naver</a>
+    <br>
+    <h1 class="shadow">그림자효과를 추가해요</h1>
+    <br>
+    <ul class="listSt">
+        <li>리스트</li>
+        <li>스타일을</li>
+        <li>바꿔요</li>
+    </ul>
+    <hr>
+    <h1 style="color: blue;">Unit of size</h1>
+    <h3 style="font-size: 10px;">px</h3>
+    <h3 style="font-size: 3rem">rem</h3>
+    <h3 style="font-size: 2rem">em</h3>
+    <h3 style="font-size: 20vw;">vw</h3>
+    <h3 style="font-size: 10vh;">vh</h3>
+    <hr>
+    <h1 style="color: blue;">COLOR</h1>
+    <!-- name of color-->
+    <span style="color: red;">색상 이름 그대로 표시</span>
+    <!-- rgb/rgba -->
+    <span style="color: rgba(3, 5, 7, 0.5);">rgb이용하기</span> 
+    <!-- 16진수 -->
+    <span style="color: #839210">16진수 사용</span>
+</body>
+</html>

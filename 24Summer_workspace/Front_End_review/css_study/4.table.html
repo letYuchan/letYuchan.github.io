@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table</title>
+    <style>
+      table {
+        color: black;
+        border: 5px solid black;
+      }
+      th {
+        padding: 10px 10px;
+        text-align: center;
+        background-color: lightcyan;
+        color: blue;
+
+        font-size: 20px;
+      }
+      td {
+        border: 1px solid red;
+        font-size: 10px;
+      }
+      tr:hover {
+        background-color: gray;
+      }
+      tr:nth-child(even) {
+        background-color: yellow;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>영화</th>
+        <th>상영시간</th>
+        <th>개봉</th>
+      </tr>
+      <tr>
+        <td>영화1</td>
+        <td>70분</td>
+        <td>24.09.05 개봉</td>
+      </tr>
+      <tr>
+        <td>영화2</td>
+        <td>80분</td>
+        <td>24.09.06 개봉</td>
+      </tr>
+      <tr>
+        <td>영화3</td>
+        <td>120분</td>
+        <td>24.10.11 개봉</td>
+      </tr>
+      <tr>
+        <td>영화4</td>
+        <td>150분</td>
+        <td>24.09.11 개봉</td>
+      </tr>
+      <tr>
+        <td>영화5</td>
+        <td>180분</td>
+        <td>24.12.25 개봉</td>
+      </tr>
+    </table>
+  </body>
+</html>
