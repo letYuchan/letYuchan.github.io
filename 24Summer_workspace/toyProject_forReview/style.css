@@ -1,4 +1,11 @@
 :root{
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-teal: #008080;
+    --color-gold: #ffd700;
+    --color-navyBlue: #000080;
+    --color-orange: #ffa500;
+
     --color-primary: var(--color-white);
     --color-primary-variant: var(--color-black);
     --color-accent-blackBg: var(--color-teal);
@@ -8,13 +15,9 @@
     --color-text: var(--color-white);
     --color-text-variant: var(--color-black);
 
-    --color-black: #000000;
-    --color-white: #ffffff;
-    --color-teal: #008080;
-    --color-gold: #ffd700;
-    --color-navyBlue: #000080;
-    --color-orange: #ffa500;
+
 }
+
 
 /* animation */
 @keyframes slideDown {
@@ -37,6 +40,37 @@
       transform: scale(1.2);
     }
   }
+
+  @keyframes textZoom {
+    0% {
+      transform: scale(1); /* 원래 크기 */
+    }
+    50% {
+      transform: scale(1.5); /* 1.5배로 확대 */
+    }
+    100% {
+      transform: scale(1); /* 다시 원래 크기로 축소 */
+    }
+  }
+
+  @keyframes rainbow {
+    0% { border-bottom-color: red; }
+    16% { border-bottom-color: orange; }
+    33% { border-bottom-color: yellow; }
+    50% { border-bottom-color: green; }
+    66% { border-bottom-color: blue; }
+    83% { border-bottom-color: indigo; }
+    100% { border-bottom-color: violet; }
+  }
+
+  @keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
   /*
   상위요소에 스타일 적용시 하위요소에 상속되는 속성: 텍스트 색상, 폰트 스타일 등
   상속되지 않는 속성: 마진, 패딩, 배경색 
@@ -83,6 +117,7 @@
 
   /* header */
   #header{
+    z-index: 1;
     width: 100%;
     position: fixed;
     top: 0;
@@ -101,7 +136,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 7px;
+    gap: 10px;
   }
   .header__menu__item::after {
     content: '';
@@ -109,7 +144,7 @@
     position: relative;
     width: 2px;
     height: 15px;
-    left: 7px;
+    left: 20px;
     background-color: var(--color-primary);
   }
   .header__menu__item {
@@ -120,11 +155,437 @@
     transform: scale(1.3);
   }
   .active{
-    outline: 1px solid var(--color-accent-variantB)
+    border-bottom: 2px solid var(--color-accent-variantB)
   }
   .header__menu__item a{
     color: var(--color-text);
   }
+  /* home */
+  
+  #home{
+    z-index: 0;
+    background-color: var(--color-primary);
+    display: flex; /* 해당요소의 하위의 하위요소에도 flex가 적용 */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    margin-top: 150px; /* 이미지가 header에 가리는 문제 해결 */
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='88' y1='88' x2='0' y2='0'%3E%3Cstop offset='0' stop-color='%23000071'/%3E%3Cstop offset='1' stop-color='%2300007c'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='75' y1='76' x2='168' y2='160'%3E%3Cstop offset='0' stop-color='%23868686'/%3E%3Cstop offset='0.09' stop-color='%23ababab'/%3E%3Cstop offset='0.18' stop-color='%23c4c4c4'/%3E%3Cstop offset='0.31' stop-color='%23d7d7d7'/%3E%3Cstop offset='0.44' stop-color='%23e5e5e5'/%3E%3Cstop offset='0.59' stop-color='%23f1f1f1'/%3E%3Cstop offset='0.75' stop-color='%23f9f9f9'/%3E%3Cstop offset='1' stop-color='%23FFFFFF'/%3E%3C/linearGradient%3E%3Cfilter id='c' x='0' y='0' width='200%25' height='200%25'%3E%3CfeGaussianBlur in='SourceGraphic' stdDeviation='12' /%3E%3C/filter%3E%3C/defs%3E%3Cpolygon fill='url(%23a)' points='0 174 0 0 174 0'/%3E%3Cpath fill='%23000' fill-opacity='.5' filter='url(%23c)' d='M121.8 174C59.2 153.1 0 174 0 174s63.5-73.8 87-94c24.4-20.9 87-80 87-80S107.9 104.4 121.8 174z'/%3E%3Cpath fill='url(%23b)' d='M142.7 142.7C59.2 142.7 0 174 0 174s42-66.3 74.9-99.3S174 0 174 0S142.7 62.6 142.7 142.7z'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top left;
 
-
+  }
+  .home__avatar:hover{
+    animation: slideDown 1s ease-in-out;
+  }
+  .home__avatar__img{
+    outline: 2px solid black;
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  .home__title{
+    color: var(--color-accent-whiteBg);
+    font-size: 3rem;
+  }
+  .home__title2{
+    color: var(--color-accent-whiteBg);
+    font-size: 3rem;
+  }
+  .home__description{
+    margin-top: 10px;
+    color: var(--color-text-variant);
+    font-size: 1.5rem;
+    margin-bottom: 25px; /* 마찬가지로 요소가 겹쳐서 조정을 위한 마진 */
+  }
+  .home__contact{
     
+    font-size: 1rem;
+    background-color: var(--color-accent-whiteBg);
+    color: var(--color-accent-variantW);
+    padding: 10px;
+  }
+  /* history */
+  #history{
+    z-index: 0;
+    background-color: var(--color-primary-variant);
+    color: var(--color-text);
+    padding: 150px;
+    margin-top: 20px;
+  }
+  .history__categories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    
+  }
+ .history__active{
+    outline: 2px solid var(--color-accent-variantB) !important;
+    border-radius: 10px;
+  }
+  .history__active button{
+    color: var(--color-accent-blackBg) !important; /* 기존 category button의 스타일이 우선영향을 주고 있어서 불가피하게 사용 */
+  }
+  .history__category{
+    outline: 2px solid var(--color-primary);
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  .history__category button{ /* 버튼 태그는 부모태그의 스타일을 상속받지 않음 */
+    color: var(--color-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  .history__category:hover{
+    outline: 2px solid var(--color-accent-variantB);
+    cursor: pointer;
+  }
+  .history__category:hover button{
+    color: var(--color-accent-blackBg);
+  }
+  .history__description{
+    text-align: center;
+  }
+  .history__description:hover{
+    animation: textZoom 1s ease-in
+  }
+  .history__child{
+    display: block;
+  }
+  .history__adol{
+    display: none;
+  }
+  .history__adult{
+    display: none;
+  }
+  /* achiev */
+  #acheive{
+    z-index: 0;
+    padding: 100px;
+  }
+  .acheive__container{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+  .acheive__items{
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-auto-rows: 150px;
+    grid-gap: 1rem;
+  }
+  .acheive__item{
+    outline: 1px solid var(--color-accent-whiteBg);
+    box-shadow: 5px 5px 0px 0px rgba(109,40,217);
+  }
+  .acheive__item img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+ /* 초기 메타데이터 상태 - 안보이도록 설정 */
+.acheive__metaData1,
+.acheive__metaData2,
+.acheive__metaData3,
+.acheive__metaData4,
+.acheive__metaData5,
+.acheive__metaData6,
+.acheive__metaData7,
+.acheive__metaData8,
+.acheive__metaData9 {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  top: 200px;
+  right: 155px;
+  background-color: var(--color-primary-variant);
+  color: var(--color-text);
+  text-align: center;
+  line-height: 150px;
+  visibility: hidden; /* 완전히 보이지 않게 설정 */
+}
+
+/* 각 이미지에 hover할 때 해당 메타데이터만 보이도록 설정 */
+.item1:hover .acheive__metaData1,
+.item2:hover .acheive__metaData2,
+.item3:hover .acheive__metaData3,
+.item4:hover .acheive__metaData4,
+.item5:hover .acheive__metaData5,
+.item6:hover .acheive__metaData6,
+.item7:hover .acheive__metaData7,
+.item8:hover .acheive__metaData8,
+.item9:hover .acheive__metaData9 {
+  visibility: visible; /* 가시성 활성화 */
+  cursor: pointer;
+  animation: slideDown 600ms ease-in;
+}
+.iphoneImg{
+  height: 800px;
+  width: 800px;
+}
+.acheive__metaData__container::after{
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 120px;
+  background: rgba(0, 0, 0, 0.3); /* 그림자 색상 */
+  border-radius: 50%; /* 둥근 그림자 */
+  bottom: -10px; /* 사물 아래에 위치 */
+  right: 110px;
+  filter: blur(15px); /* 부드럽게 퍼지도록 설정 */
+  /*  filter: 시각적 필터효과 제공, blur(px): 흐림, brightness(%): 밝기 invert(%): 반전색상 */
+}
+
+
+  /* think */
+  #think{
+    z-index: 0;
+    position: relative;
+    background-color: var(--color-primary-variant);
+    color: var(--color-text);
+    padding: 200px;
+    background-color: #040004;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .think__title{
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .think__description{
+    font-size: 1.2rem;
+    word-spacing: 3px;
+  }
+  /* contact */
+  #contact{
+    z-index: 0;
+    background-color: var(--color-primary);
+    text-align: center;
+    color: var(--color-accent-variantW);
+    margin: 50px;
+  }
+  .contact__title{
+    font-size: 3rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid red;
+    animation: rainbow 3s infinite;
+  }
+  .contact__links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 5px;
+  }
+  .contact__link:hover{
+    border-bottom: 3px solid var(--color-accent-whiteBg);
+    border-radius: 10%;
+  }
+  .blog{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  .git{
+    padding: 10px;
+    font-size: 50px;
+    color: black;
+  }
+  .contact__desc{
+    text-align: left;
+  }
+  /* aside */
+  #goHome{
+    opacity: 0.8;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 100px;
+    height: 100px;
+    font-size: 50px; /* 폰트사이즈도 하위요소에 상속됨 */
+    background-color: var(--color-accent-whiteBg);
+    border: 3px solid var(--color-accent-variantB);
+    border-radius: 50%; /* 테스트해본 결과 50%나 100%나 똑같은 원임 */
+    color: var(--color-accent-variantW);
+    display: none; /* 아이콘 중앙정렬을 위한 테크닉(원래는 flex지만 JS제어를 위해 초기값은 none */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 50px rgba(8, 112, 184, 0.7);
+  }
+  /* toggle */
+  .header__toggle{
+    font-size: 2rem;
+    position: absolute;
+    right: 10px;
+    top: 1rem;
+    display: none;
+  }
+  
+
+  /* responsive web */
+  @media screen and (max-width: 768px) {
+
+    /* home */
+    #home{
+      gap: 3px;
+      background-image: none;
+      margin-top: 170px;
+    }
+
+    .home__avatar__img{
+      width: 200px;
+      height: 200px;
+    }
+
+    .home__title{
+      font-size: 2rem;
+    }
+    .home__title2{
+      font-size: 2rem;
+    }
+    .home__description{
+      font-size: 1rem;
+    }
+
+    /* history */
+    #history{
+      padding: 50px;
+    }
+
+    .history__title{
+      font-size: 2rem;
+      padding-bottom: 30px;
+    }
+    .history__categories{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .history__category{
+      width: 100%;
+      text-align: center;
+    }
+    .history__description{
+      font-size: 1.5rem;
+    }
+    .history__description:hover{
+      animation: none;
+    }
+
+    /* acheive */
+    .acheive__container{
+      justify-content: center;
+      align-items: center;
+    }
+    .acheive__metaData__container{
+      display: none;
+    }
+.acheive__metaData1,
+.acheive__metaData2,
+.acheive__metaData3,
+.acheive__metaData4,
+.acheive__metaData5,
+.acheive__metaData6,
+.acheive__metaData7,
+.acheive__metaData8,
+.acheive__metaData9{
+  width: 500px;
+  height: 300px;
+  top: 50px;
+  left: 0px;
+  opacity: 0.6;
+}
+.item1:hover .acheive__metaData1,
+.item2:hover .acheive__metaData2,
+.item3:hover .acheive__metaData3,
+.item4:hover .acheive__metaData4,
+.item5:hover .acheive__metaData5,
+.item6:hover .acheive__metaData6,
+.item7:hover .acheive__metaData7,
+.item8:hover .acheive__metaData8,
+.item9:hover .acheive__metaData9 {
+  animation: slideDown 250ms ease-in;
+}
+/* think */
+#think{
+  padding: 50px;
+}
+.think__description{
+  font-size: 1.5rem;
+}
+/* contact */
+#contact{
+  margin: 10px;
+}
+.contact__title{
+  font-size: 2rem;
+}
+.contact__desc{
+  font-size: 1.5rem;
+  color: var(--color-text-variant);
+  text-align: center;
+}
+.blog{
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+.git{
+  padding: 10px;
+  font-size: 70px;
+  color: black;
+}
+/* aside */
+#goHome{
+  right: 2rem;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+}
+/* toggle */
+#header{
+  opacity: 1;
+}
+.header__toggle{
+  display: block;
+  cursor: pointer;
+}
+
+.header__toggle:hover{
+  animation: rotateAnimation 500ms ease-out;
+}
+.active{
+  outline: none;
+  border-bottom: 2px solid var(--color-accent-variantB);
+  border-radius: 10px;
+}
+.header__title{
+  font-size: 1rem;
+}
+.header__nav{
+  width: 100%;
+}
+.header__menu{
+  flex-direction: column;
+  display: none;
+}
+.header__menu__item{
+  font-size: 1.5rem;
+}
+.header__menu__item::after{
+  display: none;
+}
+.header__menu__item:hover{
+  border-bottom: 2px solid var(--color-accent-variantB);
+  border-radius: 10px;
+}
+
+  }

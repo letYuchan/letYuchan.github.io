@@ -1,0 +1,183 @@
+:root{
+    --color-primary: var(--color-white);
+    --color-primary-variant: var(--color-black);
+    --color-accent-blackBg: var(--color-teal);
+    --color-accent-variantB: var(--color-gold);
+    --color-accent-whiteBg: var(--color-navyBlue);
+    --color-accent-variantW: var(--color-orange);
+    --color-text: var(--color-white);
+    --color-text-variant: var(--color-black);
+
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-teal: #008080;
+    --color-gold: #ffd700;
+    --color-navyBlue: #000080;
+    --color-orange: #ffa500;
+}
+
+/* animation */
+@keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scale {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  /*
+  상위요소에 스타일 적용시 하위요소에 상속되는 속성: 텍스트 색상, 폰트 스타일 등
+  상속되지 않는 속성: 마진, 패딩, 배경색 
+   */
+  /* common init */
+  *{
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family: 'Playfair Display', sans-serif;
+    margin: 0; /* 기본 브라우저 스타일을 제거하여 정밀한 레이아웃을 조정 */
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul,p,h1,h2,h3{
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  button{
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+  }
+
+
+
+  .max-container{
+    max-width: 1300px;
+    margin: auto; /* 모든 요소는 왼쪽정렬 -> 가운데 정렬을 위한 기법 */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* header */
+  #header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    padding: 1rem;
+    background-color: var(--color-primary-variant);
+    justify-content: space-between;
+    align-items: cetner;
+    border-bottom: 3px solid var(--color-primary);
+  }
+
+  .header__title{
+    color: var(--color-text);
+  }
+  .header__menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+  }
+  .header__menu__item::after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 2px;
+    height: 15px;
+    left: 7px;
+    background-color: var(--color-primary);
+  }
+  .header__menu__item {
+    padding: 15px;
+    transition: all 200ms ease-out;
+  }
+  .header__menu__item:hover{
+    transform: scale(1.3);
+  }
+  .active{
+    outline: 1px solid var(--color-accent-variantB)
+  }
+  .header__menu__item a{
+    color: var(--color-text);
+  }
+  /* home */
+  #home{
+    background-color: var(--color-primary);
+    display: flex; /* 해당요소의 하위의 하위요소에도 flex가 적용 */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    margin-top: 150px; /* 이미지가 header에 가리는 문제 해결 */
+  }
+  .home__avatar:hover{
+    animation: slideDown 1s ease-in-out;
+  }
+  .home__avatar__img{
+    outline: 2px solid black;
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  .home__title{
+    color: var(--color-accent-whiteBg);
+    font-size: 3rem;
+  }
+  .home__description{
+    margin-top: 10px;
+    color: var(--color-text-variant);
+    font-size: 1.5rem;
+    margin-bottom: 25px; /* 마찬가지로 요소가 겹쳐서 조정을 위한 마진 */
+  }
+  .home__contact{
+    
+    font-size: 1rem;
+    background-color: var(--color-accent-whiteBg);
+    color: var(--color-accent-variantW);
+    padding: 10px;
+  }
+  /* history */
+  #history{
+    background-color: var(--color-primary-variant);
+    color: var(--color-text);
+    margin-top: 50px;
+  }
+  .history__categories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .history__category{
+    color: var(--color-text);
+  }
+ 
+
+    
