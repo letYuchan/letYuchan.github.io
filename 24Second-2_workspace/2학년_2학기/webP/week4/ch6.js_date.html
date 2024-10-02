@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date</title>
+</head>
+<body>
+    <script>
+        // 현재 날짜와 시간을 가져와 출력
+        let today = new Date();
+        document.write(today + "<hr>")
+
+        // 요일을 나타내는 문자열 ("일" ~ "토")
+        const day = "일월화수목금토";
+
+        // 현재 날짜의 요일을 계산해서 출력 (0: 일요일, 6: 토요일)
+        document.write(day[today.getDay()] + "요일<br>");
+
+        // 현재 연도를 출력
+        document.write(today.getFullYear() + "년<hr>");
+        
+        // 입력된 날짜와 오늘 날짜를 비교하여 날짜 차이를 계산하는 함수
+        function calculateDays(){
+            // 입력한 년, 월, 일을 가져와 숫자로 변환
+            const year = parseInt(document.getElementById("year").value);
+            const month = parseInt(document.getElementById("month").value);
+            const day = parseInt(document.getElementById("day").value);
+            
+            // 오늘 날짜를 다시 가져옴
+            const today = new Date();
+            
+            // 입력한 년, 월, 일을 바탕으로 새로운 날짜 객체 생성 (월은 0부터 시작하므로 -1을 함)
+            const inputDate = new Date(year, month - 1, day);
+
+            // 오늘 날짜와 입력한 날짜의 차이를 밀리초 단위로 계산
+            const timeDiff = today - inputDate;
+
+            // 차이를 일 단위로 변환 (밀리초 -> 초 -> 분 -> 시간 -> 일)
+            const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+            // 현재 날짜와 시간을 출력
+            document.getElementById("today").innerHTML = `${today.toLocaleString()}`;
+
+            // 날짜 차이가 0 이상이면 과거, 그렇지 않으면 미래로 판단
+            if (daysDiff >= 0)
+                document.getElementById("result").innerHTML = `${daysDiff}일 전`;
+            else
+                document.getElementById("result").innerHTML = `${-daysDiff}일 남았음`;
+        }
+    </script>
+    
+    <h2>궁금한 날짜를 입력하세요:</h2>
+
+    <!-- 사용자가 입력할 년, 월, 일 입력 필드 -->
+    <input type="number" id="year" placeholder="년">
+    <input type="number" id="month" placeholder="월">
+    <input type="number" id="day" placeholder="일">
+
+    <!-- 버튼을 클릭하면 calculateDays() 함수 실행 -->
+    <button onclick="calculateDays()">계산</button><hr>
+    
+    <!-- 오늘 날짜를 표시할 공간 -->
+    <p id="today"></p>
+
+    <!-- 계산 결과를 표시할 공간 -->
+    <p id="result"></p>
+</body>
+</html>

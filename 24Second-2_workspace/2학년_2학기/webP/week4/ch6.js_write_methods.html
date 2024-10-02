@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 위치 확인하기</title>
+    <!-- inline -->
+    <script> 
+        document.write("내부 자바스크립트로 작성한 것<hr>")
+    </script>
+    <!-- outer -->
+    <script src="./ch6.js_outer_file.js"></script>
+</head>
+<body>
+    <!-- in the tag -->
+    <a href="#" onclick="document.write('onclick 태그의 자바스크립트')">'
+        눌러보세요!<hr>
+    </a>
+</body>
+</html>

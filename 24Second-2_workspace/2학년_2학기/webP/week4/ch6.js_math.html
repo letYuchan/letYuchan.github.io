@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<body>
+    <script>
+        // 16진수 색상 코드를 만들기 위한 문자들 (0~9, A~F)
+        const letters = "0123456789ABCDEF";
+
+        // 색상 코드가 저장될 변수 (초기 값은 #)
+        let color = "#";
+
+        // 색상 변경 횟수를 셀 변수
+        let count = 1;
+
+        // 1초마다 changeColor 함수를 실행하는 interval 설정
+        let intervalID = setInterval(changeColor, 1000);
+
+        // 배경색을 랜덤하게 변경하는 함수
+        function changeColor() {
+            // 25회 이상 실행되면 setInterval을 중지 (타이머 해제)
+            if (++count > 25)
+                clearInterval(intervalID);
+
+            // 6자리 16진수 색상 코드를 생성
+            for (let k = 0; k < 6; k++)
+                color += letters[Math.floor(Math.random() * 16)]; // 0~15 사이의 난수를 생성하여 16진수 값 선택
+
+            // 새로운 색상을 가진 div 요소를 화면에 출력
+            document.write("<div style='background-color:" + color + "'>" + color + "</div>");
+
+            // color 변수를 다시 초기화하여 다음 색상 생성을 준비 (#으로 초기화)
+            color = "#";
+        }
+    </script>
+</body>
+</html>

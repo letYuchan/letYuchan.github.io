@@ -68,7 +68,7 @@
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(180deg);
     }
 }
   /*
@@ -282,10 +282,13 @@
     grid-template-columns: repeat(3, 150px);
     grid-auto-rows: 150px;
     grid-gap: 1rem;
+
   }
   .acheive__item{
     outline: 1px solid var(--color-accent-whiteBg);
-    box-shadow: 5px 5px 0px 0px rgba(109,40,217);
+    border-radius: 34px;
+    box-shadow: 5px 5px 0px 0px rgb(113, 110, 117);
+    overflow: hidden;
   }
   .acheive__item img{
     width: 150px;

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <style>
+        div{
+            display: inline-block;
+            background-color: yellow;
+            color: blue;
+            font-size: 30px;
+        }
+        @keyframes down {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(400px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div style="animation: down 3s;">H</div>
+    <div style="animation: down linear 3s 5;">T</div>
+    <div style="animation: down 3s infinite;">M</div>
+    <div style="animation: down 3s infinite alternate;">L</div>
+</body>
+</html>

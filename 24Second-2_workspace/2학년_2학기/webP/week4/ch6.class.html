@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<body>
+    <script>
+        class Animal{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+        }
+        class Person extends Animal {
+            constructor(name, age, id){
+                super(name, age);
+                this.id = id;
+            }
+        }
+        let ps = new Person('유찬', 23, 21101231);
+        document.write(`${ps.name}의 나이는 ${ps.age}살, ID: ${ps.id}<hr>`);
+    </script>
+</body>
+</html>

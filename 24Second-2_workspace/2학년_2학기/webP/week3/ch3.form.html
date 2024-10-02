@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼</title>
+</head>
+<body>
+    <!-- method: 정보전달방법 속성 -> get: 간단한 암호화, 최대 전송 데이터 제약, 검색어와 같은 간단한 데이터 전달 -->
+     <!-- post: 확실한 암호화, 최대 전송 데이터 제약없음, 패스워드 같은 중요한 데이터 전달 -->
+    <form action="server.php" method="post"> 
+        아이디<input type="text" id="id"><br>
+        비밀번호<input type="password" id="pwd">
+        <br><input type="button" value="button">
+        <br><input type="reset" value="reset">
+        <br><input type="submit" value="submit">
+    </form>
+</body>
+</html>
