@@ -46,7 +46,7 @@ function findFirstIntersecting(sections) {
 function selectNavItem(index) {
   const navItem = navItems[index];
   if (!navItem) return;
-  activeNavItem.classList.remove('active');
+  activeNavItem.classList.remove('nav__active');
   activeNavItem = navItem;
-  activeNavItem.classList.add('active');
+  activeNavItem.classList.add('nav__active');
 }
