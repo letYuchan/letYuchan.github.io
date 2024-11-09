@@ -15,5 +15,5 @@ int main(int argc, char* argv[]) {
     char* sql;
     sql = "CREATE TABLE COMPANY( NAME TEXT NOT NULL);";
     rc = sqlite3_exec(db, sql, 0, 0, &zErrMsg);
-    sqlite3_close(db);
+    sqlite3_close(db);     
 }
