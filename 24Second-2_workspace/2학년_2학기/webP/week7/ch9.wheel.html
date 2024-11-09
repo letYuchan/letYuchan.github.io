@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wheel</title>
+</head>
+<body>
+    <h4>마우스 휠을 돌려보세요</h4><hr>
+    <img id="largerImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoQ3hKa5owDoZAuP4DQF-2p5ExQse4iDCg-Q&s" width="320" height="210">
+    <script>
+        const image = document.getElementById("largerImage");
+        let wb = 320, hb = 210;
+
+        document.addEventListener('wheel', (event) => {
+            event.preventDefault(); // 기본 스크롤 이벤트 제거
+            if(event.deltaY < 0){
+                wb = wb *1.1;
+                hb = hb *1.1;
+            } else {
+                wb = wb /1.1;
+                hb = hb /1.1;
+            }
+            image.style.width = wb + 'px';
+            image.style.height = hb + 'px';
+        });
+    </script>
+</body>
+</html>

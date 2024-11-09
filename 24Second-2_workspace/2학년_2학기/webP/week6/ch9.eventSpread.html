@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 전파방향: 버블링 / 캡처링</title>
+    <style>
+        #parent{
+            border: 1px solid black;
+        }
+
+        #child{
+            border: 1px solid red;
+            padding: 20px;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">div 부모 태그
+        <div id="child">div 자식 태그</div>
+    </div>
+    <script>
+        // 이벤트 전파의 흐름은 기본적으로 캡처링 -> 타겟 -> 버블링임, 이 아래코드는 각각 버블링과 캡처링단계를 시각적으로 확인하고 이벤트를 처리하기 위함
+        document.getElementById("parent").addEventListener("click", function(){
+            alert("부모 요소에 클릭 이벤트 발생(버블링 단계");
+        })
+
+        document.getElementById("child").addEventListener("click", function(){
+            alert("자식 요소에 클릭 이벤트 발생(버블링 단계");
+        })
+
+        document.getElementById("parent").addEventListener("click", function(){
+            alert("부모 요소에 클릭 이벤트 발생(캡처링 단계");
+        }, true);
+
+        document.getElementById("child").addEventListener("click", function(){
+            alert("자식 요소에 클릭 이벤트 발생(캡처링 단계");
+        }, true);
+    
+    </script>
+</body>
+</html> 

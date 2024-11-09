@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 객체와 매개변수</title>
+    <style>
+        #followMouse {
+            position: absolute; /* 이미지의 위치를 자유롭게 이동할 수 있도록 설정 */
+            width: 100px; /* 이미지 크기 조절 (원하는 크기로 설정 가능) */
+        }
+    </style>
+</head>
+<body>
+    <img id="followMouse" src="https://png.pngtree.com/png-clipart/20190918/ourmid/pngtree-vector-flying-in-the-plane-png-3237235-png-image_1725040.jpg">
+    <script>
+        let image = document.getElementById("followMouse");
+        document.onmousemove = updateImage; // onmousemove 리스너 발동시 updateImage 핸들러 발동
+
+        function updateImage(event){
+            const X = event.clientX; // 마우스 X 좌표
+            const Y = event.clientY; // 마우스 Y 좌표
+            image.style.left = `${X}px`;  // 이미지의 X 좌표 변경
+            image.style.top = `${Y}px`;   // 이미지의 Y 좌표 변경
+        }
+        
+    </script>
+</body>
+</html>

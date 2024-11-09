@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 업 다운</title>
+</head>
+<body>
+    <h4>마우스 버튼을 누르고 유지</h4><hr>
+    <img id="largerImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoQ3hKa5owDoZAuP4DQF-2p5ExQse4iDCg-Q&s" width="50%">
+    <script>
+        let image = document.getElementById("largerImage");
+        image.onmousedown = larger; // 클릭 Hold
+        image.onmouseup = back; // 떼기
+
+        function larger(){
+            image.style.transform = "scale(2, 2)";
+        }
+
+        function back(){
+            image.style.transform = "scale(1,1)";
+        }
+    </script>
+</body>
+</html>

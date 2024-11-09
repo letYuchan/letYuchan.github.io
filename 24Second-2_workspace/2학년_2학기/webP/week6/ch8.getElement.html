@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소에 접근하기</title>
+</head>
+<body>
+    <p id="ide"></p>
+    <p class="elm"></p>
+    <p class="elm"></p>
+    <a href="https://www.naver.com">네이버</a>
+    <p name="namee"></p>
+    <script>
+        // id로 선택
+        document.getElementById("ide").innerHTML = "getElementById: id요소만 선택";
+
+        // class로 선택 (여러 요소 반환)
+        let elmElements = document.getElementsByClassName("elm");
+        for (let i = 0; i < elmElements.length; i++) {
+            elmElements[i].innerHTML = "getElementByClassName: 해당되는 class요소 모두 선택";
+        }
+
+        // name으로 선택 (여러 요소 반환 가능)
+        let nameElements = document.getElementsByName("namee");
+        for (let i = 0; i < nameElements.length; i++) {
+            nameElements[i].innerHTML = "getElementByName: 해당되는 name요소 선택";
+        }
+
+        // tag로 선택 (여러 요소 반환 가능)
+        let anchorElements = document.getElementsByTagName("a");
+        for (let i = 0; i < anchorElements.length; i++) {
+            anchorElements[i].innerHTML = "getElementByTagName: 해당되는 tag 선택";
+        }
+
+        // 여러요소로 반환이 가능한 경우, 단일요소가 아닌 배열로 반환하기 때문에 for문을 사용해줘야 함
+    </script>
+</body>
+</html>

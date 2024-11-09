@@ -1,0 +1,66 @@
+:root {
+    --color-primary: #4285f4;
+    --color-secondary: #0f9d58;
+    --color-gray: #e8e5e5;
+    --color-white: #ffffff;
+    --color-black: #000000;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* padding 포함하여 너비가 박스 크기를 넘지 않도록 설정 */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-gray);
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.signup-container {
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    color: var(--color-primary);
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    color: var(--color-black);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* padding 포함하여 너비 조정 */
+}
+
+button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size:
+}

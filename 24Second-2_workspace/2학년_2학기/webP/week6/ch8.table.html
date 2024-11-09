@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 요소 추가/삭제</title>
+</head>
+<body>
+    <table id="target" sytle= "border=1">
+        <tr><td style="background-color: ;">원래 셀</td><td>원래 셀</td></tr>
+    </table><br>
+    
+    <button onclick="insertTable()">행 추가</button>
+    <button onclick="deleteTable()">행 삭제</button>
+
+    <script>
+        function insertTable() {
+            // 테이블의 참조 가져오기
+            let table = document.getElementById("target");
+
+            // 새로운 행과 셀 생성
+            let newRow = table.insertRow(); // 새로운 행 추가
+            let newCell1 = newRow.insertCell(0); // 첫 번째 셀 추가
+            let newCell2 = newRow.insertCell(1); // 두 번째 셀 추가
+            let newCell3 = newRow.insertCell(2); // 세 번째 셀 추가
+
+            // 셀에 텍스트 추가
+            let num = 1;
+            newCell1.innerHTML = "새로운 셀" + num++;
+            newCell2.innerHTML = "새로운 셀" + num++;
+            newCell3.innerHTML = "새로운 셀" + num++;
+        }
+
+        function deleteTable() {
+            let table = document.getElementById("target");
+            let rowCount = table.rows.length;
+
+            // 행이 1개 이상일 때만 삭제 (모든 행 삭제 방지)
+            if (rowCount > 1) {
+                table.deleteRow(rowCount - 1); // 마지막 행 삭제
+            } else {
+                alert("더 이상 삭제할 행이 없습니다.");
+            }
+        }
+    </script>
+</body>
+</html>

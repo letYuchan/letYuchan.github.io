@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 태그 요소 접근하기</title>
+</head>
+<body>
+    <form name="myform">
+        사용자ID<input type="text" name="userId"><br>
+        패스워드<input type="password" name="passwd"><br>
+        <input type="submit" value="log in" onclick="getInput()">
+        <script>
+            function getInput(){
+                const id = document.myform.userId;
+                const pw = document.myform.passwd;
+                if(pw.value.length <= 4)
+                    alert(`${id.value}님 패스워드를 변경하세요`);
+                else
+                    alert(`${id.value}님 환영합니다`);
+            }
+        </script>
+    </form>
+</body>
+</html>

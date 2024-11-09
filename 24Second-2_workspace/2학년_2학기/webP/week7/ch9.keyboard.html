@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드 이벤트 사용하기</title>
+</head>
+<body>
+    <h4>좌우 화살표 키를 눌러보세요</h4><hr>
+    <img id="largerimage" src="https://cdn.imweb.me/upload/S20210807d1f68b7a970c2/7170113c6a983.jpg" width="300px" height="300px">
+    <script>
+        // 이미지를 가져옴 (id가 'largerimage'임에 주의)
+        const image = document.getElementById("largerimage");
+        let wb = 0;  // 이미지의 X 좌표를 저장하는 변수
+
+        // 키보드가 눌렸을 때 발생하는 이벤트
+        document.addEventListener("keydown", (event) => {
+            // 왼쪽 화살표가 눌렸을 때
+            if (event.key == "ArrowLeft") {
+                moveImage(-10);  // 이미지 왼쪽으로 이동
+            }
+            // 오른쪽 화살표가 눌렸을 때
+            else if (event.key == "ArrowRight") {
+                moveImage(10);  // 이미지 오른쪽으로 이동
+            }
+        });
+
+        // 이미지의 위치를 이동시키는 함수
+        function moveImage(m) {
+            wb = wb + m;  // 이동값을 wb에 더함
+            if (wb < 0) wb = 0;  // 왼쪽 끝(0px) 이상으로는 움직이지 않게 제한
+            else if (wb > 450) wb = 450;  // 오른쪽 끝(450px) 이상으로는 움직이지 않게 제한
+            image.style.transform = `translateX(${wb}px)`;  // 이미지의 X 좌표를 변환
+        }
+    </script>
+</body>
+</html>

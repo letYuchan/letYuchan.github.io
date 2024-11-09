@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submit과 reset 이벤트 이용하기</title>
+</head>
+<body>
+    <div>
+        <form id="myForm">
+            <label for="message">입력하세요:</label> 
+            <!-- for과 id가 연결 -->
+            <input type="text" id="message" name="message"><br>
+            <!-- name은 어떤 입력필드에서 온것인지 서버가 구분하기 위한 속성 -->
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div><hr>
+    <div id="result"></div>
+    <script>
+        let form = document.getElementById("myForm");
+        let resultDiv = document.getElementById("result");
+        form.addEventListener("submit", function(event){
+            event.preventDefault(); // 폼의 기본 동작 막음
+            let messageInput = document.getElementById("message");
+            let message = messageInput.value;
+            resultDiv.innerText = "You typed: "+message;
+        })
+        form.addEventListener("reset", function(){
+            resultDiv.innerText = "Form reset!";
+        });
+    </script>
+</body>
+</html>

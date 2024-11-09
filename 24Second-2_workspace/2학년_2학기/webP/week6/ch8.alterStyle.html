@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 변경하기</title>
+</head>
+<body>
+    <div id="box" style="width: 300px; height: 300px; margin: auto"></div>
+    <script>
+        const letters = "0123456789ABCDEF";
+        let color = "#"
+        let count = 1;
+        let inervalID = setInterval(changeColor, 250);
+        function changeColor(){
+            if(++count > 50)
+                clearInterval(inervalID);
+            for(let k = 0; k <6 ;k++)
+                color = color + letters[Math.floor(Math.random()*16)];
+            document.getElementById("box").style.backgroundColor = color;
+            document.getElementById("box").style.borderRadius = `${count}%`;
+            color = "#";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다른페이지로 이동 전 이용</title>
+</head>
+<body>
+    <h3>다른 페이지로 이동하세요</h3>
+    <script>
+        // 브라우저가 페이지를 떠나기 전에 'beforeunload' 이벤트를 처리
+        window.addEventListener("beforeunload", function(event){
+            // 사용자에게 보여줄 경고 메시지 설정 (단, 대부분의 브라우저는 이 메시지를 커스터마이즈하지 않고 기본 메시지를 표시함)
+            const message = "변경사항이 저장되지 않을 수 있습니다.";
+            
+            // 이벤트 객체의 returnValue 프로퍼티에 메시지를 할당하여 경고 창을 띄움
+            event.returnValue = message; // 메세지와 관계없이 브라우저가 보안상의 이유로 기본 메세지를 띄움
+
+            // return을 통해 메시지를 반환 (단, return된 메시지를 브라우저가 사용하지 않고, 브라우저의 기본 메시지를 표시함)
+            return message; // 옛날 방식, 보안상의 이유로 커스텀 메세지 사용불가 but 그냥 형식상의 코드
+        });
+    </script>
+</body>
+</html>

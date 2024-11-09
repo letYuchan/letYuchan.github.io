@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 변경하기</title>
+</head>
+<body style="text-align: center;">
+    <img id="image" src="https://media.istockphoto.com/id/877369086/ko/%EC%82%AC%EC%A7%84/%EC%82%AC%EC%9E%90-%EB%8F%99%EA%B5%B4-%EB%A0%88%EC%98%A4-10-%EC%84%B8-%ED%9D%B0%EC%83%89-%EC%A0%88%EC%97%B0.jpg?s=612x612&w=0&k=20&c=Va40y0If5y-vs_OohhlQvAjv-872sb4jmViXeAJeY6o=">
+    <input type="button" value="Change" onclick="changeImage()">
+    <script>
+        let toggle = 1;
+        function changeImage(){
+            if(++toggle%2 == 0)
+                document.getElementById("image").src = "https://www.laborplus.co.kr/news/photo/202201/28283_39501_1131.jpg";
+            else
+                document.getElementById("image").src = "https://media.istockphoto.com/id/877369086/ko/%EC%82%AC%EC%A7%84/%EC%82%AC%EC%9E%90-%EB%8F%99%EA%B5%B4-%EB%A0%88%EC%98%A4-10-%EC%84%B8-%ED%9D%B0%EC%83%89-%EC%A0%88%EC%97%B0.jpg?s=612x612&w=0&k=20&c=Va40y0If5y-vs_OohhlQvAjv-872sb4jmViXeAJeY6o=";
+        }
+    </script>
+</body>
+</html>

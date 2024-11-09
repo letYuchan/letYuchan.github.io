@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="shortcut icon" href="./assets/gdgFavicon.png">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <h2 class="login-title">로그인</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" placeholder="이메일을 입력하세요" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요" required>
+                </div>
+                <button type="submit" class="login-btn">로그인</button>
+            </form>
+            <p>계정이 없으신가요? <a href="./signUp.html">회원가입</a></p>
+        </div>
+    </div>
+
+    <script>
+        // 미리 정해둔 비밀번호
+        const correctPassword = "password123";
+
+        // 로그인 폼 제출 이벤트
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const enteredPassword = document.getElementById("password").value;
+            
+            // 비밀번호 확인
+            if (enteredPassword !== correctPassword) {
+                alert("비밀번호가 일치하지 않습니다.");
+            } else {
+                alert("로그인 성공!");
+                window.location.href = "./onboarding.html"; // 다음 페이지로 이동
+            }0
+        });
+    </script>
+</body>
+</html>

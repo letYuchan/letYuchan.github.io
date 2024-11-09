@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 회전시키기</title>
+</head>
+<body style="text-align: center;">
+    <h1 id="rotate" style="color: blue;">Programming</h1>
+    <script>
+        const rotate = document.getElementById("rotate");
+        function rotateString(){
+            const text = rotate.textContent;
+            const firstChar = text[0];
+            const rotatedText = text.slice(1) + firstChar;
+            rotate.textContent = rotatedText;
+        };
+        setInterval(rotateString, 500);
+    </script>
+</body>
+</html>
