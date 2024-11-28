@@ -1,66 +1,94 @@
 :root {
-    --color-primary: #4285f4;
-    --color-secondary: #0f9d58;
+    --color-green: #0f9d58;
+    --color-yellow: #fbbc04;
+    --color-red: #ea4335;
+    --color-blue: #2596be;
     --color-gray: #e8e5e5;
     --color-white: #ffffff;
     --color-black: #000000;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box; /* padding 포함하여 너비가 박스 크기를 넘지 않도록 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-gray);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: var(--color-gray);
-    font-family: Arial, sans-serif;
-    margin: 0;
-}
-
-.signup-container {
-    background-color: var(--color-white);
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-h2 {
-    color: var(--color-primary);
-}
-
-label {
-    display: block;
-    text-align: left;
-    margin: 10px 0 5px;
     color: var(--color-black);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
+form {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    color: var(--color-black);
+    margin-bottom: 8px;
+}
+
+input {
     padding: 10px;
-    margin: 5px 0 15px;
+    font-size: 16px;
     border: 1px solid var(--color-gray);
     border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box; /* padding 포함하여 너비 조정 */
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--color-blue);
+    box-shadow: 0 0 5px rgba(0, 91, 184, 0.2);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 button {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    padding: 10px 15px;
+    font-size: 16px;
     border: none;
-    padding: 10px;
-    width: 100%;
     border-radius: 4px;
     cursor: pointer;
-    font-size:
+    width: 45%;
+}
+
+button[type="reset"] {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+button[type="submit"] {
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }

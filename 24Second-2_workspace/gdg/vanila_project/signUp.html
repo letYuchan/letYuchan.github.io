@@ -3,47 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입</title>
     <link rel="stylesheet" href="./css/signUp.css">
+    <link rel="shortcut icon" href="./assets/gdgFavicon.png">
+    <script src="./src/signup.js"></script>
+    <title>signup</title>
 </head>
 <body>
-    <div class="signup-container">
-        <h2>회원가입</h2>
-        <form id="signup-form">
-            <label for="username">이름</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="email">이메일</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="password">비밀번호</label>
-            <input type="password" id="password" name="password" required>
-            
-            <label for="confirm-password">비밀번호 확인</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
-            
-            <button type="submit">회원가입</button>
-        </form>
-    </div>
-    <script>
-        // script.js
-
-    document.getElementById("signup-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirm-password").value;
-
-    if (password !== confirmPassword) {
-        alert("비밀번호가 일치하지 않습니다.");
-        return;
-    }
-
-    // 회원가입 성공 로직 추가
-    alert("회원가입이 완료되었습니다!");
-    window.location.href = "./login.html";
-});
-
-    </script>
+    <form action="">
+        <div class="input-container">
+            <label for="id">이메일</label>
+            <input id="id" type="email" placeholder="example@example.com">
+        </div>
+        <div class="input-container">
+            <label for="pw">패스워드</label>
+            <input id="pw" type="password">
+        </div>
+        <div class="input-container">
+            <label for="pwCheck">패스워드 확인</label>
+            <input id="pwCheck" type="password">
+        </div>
+        <div class="input-container">
+            <label for="userName">닉네임</label>
+            <input id="userName" type="text" placeholder="영어, 한글, 숫자">
+        </div>
+        <div class="button-container">
+            <button type="reset">초기화</button>
+            <button type="submit">제출</button>
+        </div>
+    </form>
 </body>
 </html>

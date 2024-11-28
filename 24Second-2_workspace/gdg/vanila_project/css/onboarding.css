@@ -1,8 +1,8 @@
 :root {
     --color-green: #0f9d58;
-    --color-yello: #fbbc04;
+    --color-yellow: #fbbc04;
     --color-red: #ea4335;
-    --color-blue: #2596be;
+    --color-blue:   #4287f5;
     --color-gray: #e8e5e5;
     --color-white: #ffffff;
     --color-black: #000000;
@@ -57,19 +57,22 @@ button {
 
 .max-container{
     max-width: 1300px;
+    margin: auto;
 }
 
 /* header */
 #header {
+    backdrop-filter: blur(3px);
     width: 100%;
     display: flex;
     z-index: 100;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    background-color: var(--color-green);
-    color: var(--color-white);
+    color: var(--color-green);
     position: fixed;
+    z-index: 100;
+    top: 0;
 }
 
 .header_title-container{
@@ -107,106 +110,147 @@ button {
 /* main */
 #main {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding-bottom: 50px;
-}
-
-.main_1{
-    margin: 50px 0;
-}
-
-.main_1-container{
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 50px 30px;
-    gap: 100px;
-}
-
-
-.main_img{
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 500px;
-    height: 400px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.main_title{
-    font-size: 3rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -1px -1px 2px rgba(255, 255, 255, 0.8);
-}
-
-.main_desc{
-    font-size: 1.5rem;
-    font-style: italic;
-    line-height: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.main_2_subDesc{
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 100px;
 }
 
 .member-container {
+    border:  3px solid var(--color-yellow);
+    border-radius: 20px;
+    padding: 50px;
+    width: 100%;
+    background-color: var(--color-white);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 100px);
-    gap: 50px;
-    perspective: 1000px; /* 3D 효과를 위한 원근감 */
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-    background-color: var(--color-gray);
-    padding: 30px;
+    gap: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
 }
-
-.member {
-    width: 200px;
-    height: 100px;
-    transform-style: preserve-3d; /* 자식 요소들이 3D 공간에서 회전하도록 설정 */
-    transition: transform 0.6s; /* 회전 애니메이션 */
+.member_card {
+    font-size: 1.5rem;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    border-radius: 20px;
     position: relative;
-    border-radius: 8px; /* 둥근 모서리 추가 */
-    background-color: var(--color-white); 
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
-
+    width: 200px;
+    height: 150px;
+    background-color: var(--color-yellow);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 3px dotted var(--color-black);
 }
 
-.member:hover {
-    transform: rotateY(180deg); /* hover 시 180도 회전 */
+.member_card:hover {
+    transform: translateY(-5px); /* 위로 이동하는 효과 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
 }
 
-.member .front, .member .back {
+/* aside */
+#aside {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 100;
+    border-radius: 50%;
+}
+
+.randomQ img{
+    width: 100px;
+    height: 100px;
+}
+
+#aside:hover {
+    transform: translateY(-5px); /* 위로 이동하는 효과 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
+}
+.randomQ:hover::after {
+    content: "랜덤으로 질문하기!"; /* 띄울 문구 */
     position: absolute;
+    top: 100%; /* 버튼 아래쪽에 위치 */
+    left: 50%; /* 버튼의 중앙에 위치 */
+    transform: translateX(-50%); /* 중앙 정렬 */
+    background-color: rgba(0, 0, 0, 0.7); /* 배경 색 */
+    color: white; /* 텍스트 색 */
+    padding: 5px 10px; /* 여백 */
+    border-radius: 5px; /* 둥근 모서리 */
+    font-size: 14px; /* 폰트 크기 */
+    white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 */
+    opacity: 0; /* 기본적으로 숨겨둠 */
+    transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+/* hover 효과 시 문구가 나타나도록 */
+.randomQ:hover::after {
+    opacity: 1; /* 문구가 나타나도록 */
+}
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* 뒷면이 보이지 않도록 설정 */
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.6);
     align-items: center;
     justify-content: center;
-    border-radius: 8px; /* 둥근 모서리 */
 }
 
-.member .back {
-    transform: rotateY(180deg); /* 뒷면은 처음에 뒤집혀 있음 */
-    background-color: var(--color-yello); /* 뒷면 배경 색 */
-    color: white;
-    font-size: 16px;
+.modal_content {
+    background-color: var(--color-white);
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+#modalTitle {
+    font-size: 1.5rem;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.member img {
-    object-fit: cover;
+#questionText {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--color-gray);
+    border-radius: 5px;
 }
+
+.modal_buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit_button,
+.cancel_button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit_button {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    border: none;
+}
+
+.cancel_button {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border: none;
+}
+
+
+
+
 
 /* footer */
 #footer{
@@ -218,7 +262,7 @@ button {
 
 .footer_desc{
     text-align: left;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .footer_contact-container{

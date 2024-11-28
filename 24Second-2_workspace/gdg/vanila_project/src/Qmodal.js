@@ -1,4 +1,21 @@
-// 모든 멤버 카드에 클릭 이벤트 추가
+
+
+// 랜덤 버튼 클릭 시 랜덤으로 카드 선택하여 모달 띄우기
+document.querySelector('.randomQ').addEventListener('click', () => {
+    // 모든 멤버 카드 중에서 랜덤으로 하나 선택
+    const memberCards = document.querySelectorAll('.member_card');
+    const randomIndex = Math.floor(Math.random() * memberCards.length);  // 랜덤 인덱스 생성
+    const randomCard = memberCards[randomIndex];  // 랜덤 카드 선택
+    const memberName = randomCard.innerText;  // 선택된 카드의 이름 가져오기
+
+    // 모달에 멤버 이름 넣기
+    document.getElementById('memberName').innerText = memberName;
+
+    // 모달 띄우기
+    document.getElementById('memberModal').style.display = 'flex';
+});
+
+// 기존 멤버 카드 클릭 시 모달 띄우기 (변경 없음)
 document.querySelectorAll('.member_card').forEach(card => {
     card.addEventListener('click', () => {
         const memberName = card.innerText;  // 클릭된 카드의 텍스트 값 가져오기

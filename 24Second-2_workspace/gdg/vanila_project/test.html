@@ -3,56 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>180 Degree Flip Animation</title>
-  <style>
-    .container {
-      perspective: 1000px; /* 3D 효과를 위한 원근감 */
-    }
-
-    .flip-box {
-      width: 200px;
-      height: 300px;
-      background-color: #3498db;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10px;
-      transform-style: preserve-3d; /* 자식 요소들이 3D 공간에서 회전하도록 설정 */
-      transition: transform 0.6s; /* 회전 애니메이션 */
-    }
-
-    .flip-box:hover {
-      transform: rotateY(180deg); /* hover 시 180도 회전 */
-    }
-
-    .flip-box-content {
-      position: absolute;
-      backface-visibility: hidden; /* 뒷면이 보이지 않도록 설정 */
-      transition: transform 0.6s; /* 회전 시 애니메이션 추가 */
-    }
-
-    .flip-box-content.front {
-      transform: rotateY(0deg); /* 앞면 초기 상태 */
-    }
-
-    .flip-box-content.back {
-      transform: rotateY(180deg); /* 뒷면 초기 상태 */
-    }
-  </style>
+  <title>Document</title>
 </head>
 <body>
+    <p id="result"></p>
+    <button onclick="callAPIResponse()">API호출</button>
+    <button onclick="init()">초기화</button>
+    <script>
+        let result = document.getElementById("result");
+        async function fetchData(){
+          try {
+            const response = await fetch("https://api-test-gdsc-22b48e20369e.herokuapp.com/api/data");
 
-  <div class="container">
-    <div class="flip-box">
-      <div class="flip-box-content front">
-        Front Content
-      </div>
-      <div class="flip-box-content back">
-        Back Content
-      </div>
-    </div>
-  </div>
+            if(!response.ok) {
+              throw new Error(`오류발생!, 오류코드: ${response.status}`);
+            }
 
+            const data = await response.text();
+
+            displayData(data);
+          } catch(error){
+            console.log("데이터 오류"+error);
+            result.innerHTML = `데이터를 가져오는데 실패했습니다: ${error.message}`;
+          }
+        }
+
+        function displayData(data) {
+          result.innerHTML = `${data}`;
+        }
+
+        function callAPIResponse() {
+            fetchData();
+        }
+
+        function init(){
+          result.innerHTML = "";
+        }
+        
+    </script>
 </body>
 </html>
